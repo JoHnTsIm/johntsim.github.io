@@ -1803,7 +1803,7 @@ footer {
     #myBtn {
         display: none;
         position: fixed;
-        bottom: 20px;
+        bottom: 30px;
         right: 10px;
         z-index: 99;
         font-size: 25px;
