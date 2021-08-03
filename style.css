@@ -294,6 +294,11 @@ footer {
     margin-top: 100px;
 }
 
+.url {
+    color: yellow;
+    font-size: 20px;
+}
+
 #myBtn {
     display: none;
     position: fixed;
@@ -921,6 +926,11 @@ footer {
         height: 130px;
     }
 
+    .url {
+        color: yellow;
+        font-size: 15px; 
+    }
+
     #myBtn {
         display: none;
         position: fixed;
@@ -1206,6 +1216,11 @@ footer {
         height: 120px;
     }
 
+    .url {
+        color: yellow;
+        font-size: 15px; 
+    }
+
     #myBtn {
         display: none;
         position: fixed;
@@ -1481,6 +1496,11 @@ footer {
     iframe {
         width: 180px;
         height: 110px;
+    }
+
+    .url {
+        color: yellow;
+        font-size: 15px; 
     }
 
     #myBtn {
