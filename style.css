@@ -935,7 +935,7 @@ footer {
         display: none;
         position: fixed;
         bottom: 20px;
-        right: 0px;
+        right: 10px;
         z-index: 99;
         font-size: 25px;
         border: none;
@@ -943,7 +943,7 @@ footer {
         background-color: black;
         color: white;
         cursor: pointer;
-        padding: 4px;
+        padding: 10px;
         padding-bottom: 0px;
         padding-top: 5px;
         border-radius: 4px;
@@ -1225,7 +1225,7 @@ footer {
         display: none;
         position: fixed;
         bottom: 20px;
-        right: 0px;
+        right: 10px;
         z-index: 99;
         font-size: 25px;
         border: none;
@@ -1233,7 +1233,7 @@ footer {
         background-color: black;
         color: white;
         cursor: pointer;
-        padding: 4px;
+        padding: 10px;
         padding-bottom: 0px;
         padding-top: 5px;
         border-radius: 4px;
@@ -1507,7 +1507,7 @@ footer {
         display: none;
         position: fixed;
         bottom: 20px;
-        right: 0px;
+        right: 10px;
         z-index: 99;
         font-size: 25px;
         border: none;
@@ -1515,7 +1515,7 @@ footer {
         background-color: black;
         color: white;
         cursor: pointer;
-        padding: 4px;
+        padding: 10px;
         padding-bottom: 0px;
         padding-top: 5px;
         border-radius: 4px;
