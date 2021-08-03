@@ -1634,12 +1634,19 @@ footer {
     }
 
     .navbar-static {
-        bottom: 1px;
-        position:fixed;
+        position:relative;
         width: 100%;
         z-index: 1;
         margin: 0;
         box-sizing: border-box;
+    }
+
+    .navbar {
+        position:fixed;
+        margin: 0;
+        background-color: #333;
+        display: block;
+        text-align: center;
     }
 
     .display-none {
