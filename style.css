@@ -1624,7 +1624,7 @@ footer {
 
 
 /* iPhone 12 mini */
-@media (width:360px) {
+@media (height:780px) {
     body {
         background-color: #221f1f;
         margin: 0; 
