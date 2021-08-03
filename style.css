@@ -1633,6 +1633,15 @@ footer {
         overflow-x: hidden;
     }
 
+    .navbar {
+        bottom: 1px;
+        position:relative;
+        margin: 0;
+        background-color: #333;
+        display: block;
+        text-align: center;
+    }
+
     .display-none {
         display: none;
     }
