@@ -9,6 +9,7 @@ body {
 }
 
 header {
+    display: block;
     margin: 0;
     overflow: hidden;
     margin-bottom: 65px;
