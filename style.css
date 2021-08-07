@@ -327,7 +327,7 @@ footer {
   .twitter-tweet {
       margin-left: auto;
       margin-right: auto;
-      display: block;
+      width: 100% !important;
   }
 
 
@@ -635,6 +635,12 @@ footer {
           #myBtn:hover {
             background-color: #555;
           }
+
+          .twitter-tweet {
+            margin-left: auto;
+            margin-right: auto;
+            width: 60% !important;
+        }
     }
 
 
@@ -961,6 +967,12 @@ footer {
       #myBtn:hover {
         background-color: #555;
       }
+
+      .twitter-tweet {
+          justify-content: center;
+          display: block;
+            width: 20% !important;
+    }
 }
 
 
@@ -1533,4 +1545,9 @@ footer {
       #myBtn:hover {
         background-color: #555;
       }
+
+      .twitter-tweet {
+        justify-content: center;
+        display: block;
+  }
 }
