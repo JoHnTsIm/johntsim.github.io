@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <link rel="icon" href="JT.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="JT.png" type="image/x-icon"/>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Αναζήτηση άρθρων</title>
+        
+    </head>
+
+    <body>
+
+        <!-- scroll to top -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        <script src="scrollup.js"></script>
+        <!-- -------------- -->
+    
+
+        <!-- NAVBAR START -->
+        <header>
+
+            <div class="navbar-static">
+                    <div class="navbar">
+                        <ul class="margin0">
+                            <script src="script.js"></script>
+                            <span class="navbar-space-categories"><img onclick="show_hide()" class="categories-button" src="Categories Mobile.png" alt="Categories Mobile.png"></span>
+                            <a href="index.html"><img class="navbar-image" src="LOGO WITH TEXT 2.png" alt="LOGO WITH TEXT 2.png"></a>
+                            <li class="navbar-inline display-none"><a class="navbar-text" href="gaming.html">GAMING</a></li>
+                            <li class="navbar-inline display-none"><a class="navbar-text" href="tech.html">TECH</a></li>
+                            <li class="navbar-inline display-none"><a class="navbar-text" href="reviews.html">REVIEWS</a></li>
+                            <li class="navbar-inline display-none"><a class="navbar-text" href="movies-series.html">MOVIES & SERIES</a></li>
+                            <span class="navbar-space-search"><a href="search.html"><img class="search-icon" src="search.png" alt=""></a></span>
+                        </ul>
+                    </div>
+                    
+                    <div class="categories-window display-none" id="catBox">
+                        <ul id="catText">
+                            <a  href="gaming.html">GAMING <hr></a>
+                            
+                            <a href="tech.html">TECH <hr></a>
+                            
+                            <a  href="reviews.html">REVIEWS <hr></a>
+                            
+                            <a  href="movies-series.html">MOVIES & SERIES</a>
+                        </ul>
+                    </div>
+            </div>
+
+        </header>
+        <!-- NAVBAR END -->
+
+
+        <!-- Search START -->
+
+        <script src="search.js"></script>
+        <div id="search-bar">
+                <form action="" method="GET" name="k">
+                    <table class="search-bar-button">
+                        <tr>
+                            <td><input class="search-query" type="text" name="k" placeholder="Αναζήτηση άρθρου" autocomplete="off"></td>
+                            <td><input class="search-button" onclick="results()" type="submit" name="" value="Αναζήτηση"></td>
+                        </tr>
+                    </table>
+                </form>
+        </div>
+        <!-- Search END -->
+
+        <div id="search-results">
+        <!-- POST START -->
+        <div class="margin0">
+            <div class="homepost-pos">
+                    <div class="homepost" >
+                    
+                <a href="gaming.html#free-gostrunner-limited-time-steam"><img class="homeimage" 
+                    src="Free limited time ghostrunner/Ghostrunner-steam-free.png" alt="Ghostrunner-steam-free.png">
+                <a class="hometext" 
+                href="gaming.html#free-gostrunner-limited-time-steam">Κατεβάστε και παίξτε Δωρεάν το Ghostrunner για περιορισμένο χρονικό διάστημα!</a>
+                </div>
+            </div>
+        </div>
+        <!-- POST END -->
+
+        <!-- POST START -->
+        <div class="margin0">
+            <div class="homepost-pos">
+                    <div class="homepost" >
+                    
+                <a href="movies-series.html#movies-series-greek-netflix-august-2021"><img class="homeimage" 
+                    src="movies-series/movies series august greek netflix 20221/Netflix-logo-white.png" alt="Netflix-logo-white.png">
+                <a class="hometext" 
+                href="movies-series.html#movies-series-greek-netflix-august-2021">Ταινίες και σείρες στο Ελληνικό Netflix τον Αύγουστο!</a>
+                </div>
+            </div>
+        </div>
+        <!-- POST END -->
+
+        <!-- POST START -->
+        <div class="margin0">
+            <div class="homepost-pos">
+                  <div class="homepost" >
+                    
+                <a href="gaming.html#2-new-free-games-31-7-2021"><img class="homeimage" 
+                    src="2 new free games 29.7.2021/2 new free games.png" alt="2 new free games (31.7.2021).png">
+                <a class="hometext" 
+                href="gaming.html#2-new-free-games-31-7-2021">2 νέα Δωρεάν παιχνίδια στο Epic Games!</a>
+              </div>
+            </div>
+        </div>
+        <!-- POST END -->
+
+        <!-- POST START -->
+        <div class="margin0">
+            <div class="homepost-pos">
+                    <div class="homepost" >
+                    
+                <a href="gaming.html#steamdeck-valve-annoucment"><img class="homeimage" 
+                    src="Steam Deck/Steam Deck Console.png" alt="Steam Deck Console.png">
+                <a class="hometext" 
+                href="gaming.html#steamdeck-valve-annoucment">Η νέα φορητή κονσόλα της Valve!</a>
+                </div>
+            </div>
+        </div>
+        <!-- POST END -->
+
+        <!-- POST START -->
+        <div class="margin0">
+            <div class="homepost-pos">
+                    <div class="homepost" >
+                    
+                <a href="movies-series.html#resident-evil-infinite-darkness-netflix-2021"><img class="homeimage" 
+                    src="RE Infinite Darkness GR Netflix/RE INFINITE DARKNESS NTEFLIX GREECE.png" alt="RE INFINITE DARKNESS NTEFLIX GREECE.png">
+                <a class="hometext" 
+                href="movies-series.html#resident-evil-infinite-darkness-netflix-2021">Έφτασε η νέα Animated σειρά του Resident Evil στο ελληνικό Netflix!</a>
+                </div>
+            </div>
+        </div>
+        <!-- POST END -->
+
+        <!-- POST START -->
+        <div class="margin0">
+            <div class="homepost-pos">
+                    <div class="homepost" >
+                    
+                <a href="tech.html#windows-11-microsoft-event"><img class="homeimage" src="Windows 11/Windows 11.jpg" alt="Windows 11.jpg">
+                <a class="hometext" href="tech.html#windows-11-microsoft-event">Windows 11 - Τι ανακοίνωσε η Microsoft</a>
+                </div>
+            </div>
+        </div>
+        <!-- POST END -->
+
+        <!-- POST START -->
+        <div class="margin0">
+            <div class="homepost-pos">
+                <div class="homepost" >
+                    
+                <a href="reviews.html"><img class="homeimage" src="Review Ghostrunner PC Post/Ghostrunner Review.png" alt="Ghostrunner Review.png">
+                <a class="hometext" href="reviews.html#review-ghostrunner-pc-24/6/2021">Review Ghostrunner (PC Έκδοση)</a>
+            </div>
+            </div>
+        </div>
+        <!-- POST END -->
+        </div>
+
+        <!-- FOOTER START -->
+        <footer>
+            <div class="copyright-space">
+                
+                    <a href="index.html"><img class="copyright-logo" src="LOGO WITH TEXT 2.png" alt="LOGO WITH TEXT 2.png"></a>
+                    
+                    <p class="copyright-text">&copy; 2021 JohnTsim - Made by <a style="font-size: 15px;" href="index.html">JohnTsim</a></p>
+                    
+                    <a href="https://bit.ly/3hcxA4C" target="_blank"><img class="instagram" 
+                        src="instagram-logo-transparent-logo-instagram-vector-2021-116177766354twhxoagvv.png" alt="instagram trans logo"></a>
+                    
+                    <a href="https://bit.ly/3xgTvgR" target="_blank"><img class="twitter" src="Logo-Twitter-icon-transparent-PNG.png" alt="twitter trans logo"></a>
+            </div>
+
+        </footer>
+        <!-- FOOTER END -->
+
+    </body>
+</html>
