@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    position: relative;
+    position: fixed;
     margin:0;
     overflow: hidden;
     margin-bottom: 65px;
