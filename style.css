@@ -14,9 +14,6 @@ body {
 
 header {
     margin:0;
-    overflow: hidden;
-    margin-bottom: 64px;
-    top: 0;
 }
 
 .categories-button {
@@ -37,6 +34,7 @@ header {
 
 .navbar-static {
     position:fixed;
+    top: 0;
     width: 100%;
     z-index: 1;
     margin: 0;
