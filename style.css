@@ -13,7 +13,7 @@ body {
 
 header {
     margin:0;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-left: auto;
     margin-right: auto;
 }
