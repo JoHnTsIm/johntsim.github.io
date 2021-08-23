@@ -13,6 +13,7 @@ body {
 }
 
 header {
+    display: block;
     margin:0;
     overflow: hidden;
     margin-bottom: 65px;
@@ -66,6 +67,7 @@ ul {
 }
 
 .navbar-inline {
+    margin: 0;
     display: inline;
     vertical-align: 15px;
     padding-left: 10px;
