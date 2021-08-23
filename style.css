@@ -14,7 +14,7 @@ body {
 
 header {
     margin:0;
-    margin-bottom: 64px;
+    display: block;
 }
 
 .categories-button {
