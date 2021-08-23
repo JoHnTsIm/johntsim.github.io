@@ -14,8 +14,8 @@ body {
 
 header {
     margin:0;
-    display: block;
     overflow: hidden;
+    margin-bottom: 64px;
 }
 
 .categories-button {
