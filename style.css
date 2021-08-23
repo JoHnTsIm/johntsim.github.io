@@ -1,8 +1,9 @@
 /* PC */
 /* NAVBAR START */
 html {
-    scroll-behavior: smooth;
     margin: 0;
+    scroll-behavior: smooth;
+    
 }
 
 body {
