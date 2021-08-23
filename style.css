@@ -3,6 +3,7 @@
 html {
     margin: 0;
     scroll-behavior: smooth;
+    display: block;
 }
 
 body {
