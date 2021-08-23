@@ -16,6 +16,7 @@ header {
     margin:0;
     overflow: hidden;
     margin-bottom: 64px;
+    display: block;
 }
 
 .categories-button {
