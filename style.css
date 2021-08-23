@@ -15,6 +15,7 @@ body {
 header {
     margin:0;
     display: block;
+    overflow: hidden;
 }
 
 .categories-button {
