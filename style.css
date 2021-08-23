@@ -1,5 +1,9 @@
 /* PC */
 /* NAVBAR START */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #221f1f;
     margin: 0; 
@@ -9,7 +13,7 @@ body {
 }
 
 header {
-    margin:0px;
+    margin:0;
     overflow: hidden;
     margin-bottom: 65px;
     margin-left: auto;
