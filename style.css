@@ -3,7 +3,6 @@
 html {
     margin: 0;
     scroll-behavior: smooth;
-    display: block;
 }
 
 body {
@@ -40,7 +39,6 @@ header {
     width: 100%;
     z-index: 1;
     margin: 0;
-    display: block;
 }
 
 .navbar {
