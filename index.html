@@ -22,7 +22,11 @@
         <script src="scrollup.js"></script>
         <!-- -------------- -->
 
-        <script src="/script.js"></script>     
+        <script src="/script.js"></script>
+
+        <script>
+            window.history.pushState("https://johntsim.github.io/", "Sample Title", "https://johntsim.github.io/");
+        </script>
 
     </head>
 
@@ -105,6 +109,10 @@
         </div>
         <!-- POST END -->
 
+        <div onclick="showMore()" id="more" class="showMoreButton">Show more</div>
+
+        <div id="content" class="display-none">
+
         <!-- POST START -->
         <div class="margin0">
             <div class="homepost-pos">
@@ -132,10 +140,6 @@
             </div>
         </div>
         <!-- POST END -->
-
-        <div onclick="showMore()" id="more" class="showMoreButton">Show more</div>
-
-        <div id="content" class="display-none">
 
         <!-- POST START -->
         <div class="margin0">
