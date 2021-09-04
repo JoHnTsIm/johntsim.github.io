@@ -28,30 +28,7 @@
             window.history.replaceState("https://johntsim.github.io/", "Sample Title", "https://johntsim.github.io/");
         </script>
 
-        <script>
-            $(document).ready(function() {    
-        /* Every time the window is scrolled ... */
-        $(window).scroll( function(){    
-        /* Check the location of each desired element */
-        $('.graph').each( function(i){            
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-
-                //Code to initialize the graph here.
-                //This initialization should probably
-                //be deferred, to ensure performance,
-                //and the graphs should be marked as
-                //initialized so we dont't init them
-                //multiple times (possibly by changing
-                //their class so .each ignores them).
-            }            
-        });     
-        });    
-        });
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
     </head>
 
@@ -97,8 +74,8 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                     
-                <a href="gaming/neo-dwrean-paixnidi-sto-epic-games-store-3-sept-2021"><img class="homeimage" 
-                    src="Posts/Yokus island express free epic games/Yokus island express.png" alt="Stranger Things Season 4.jpeg">
+                <a href="gaming/neo-dwrean-paixnidi-sto-epic-games-store-3-sept-2021"><img class="homeimage lazyload" 
+                    src="Posts/Yokus island express free epic games/Yokus island express.png" data-src="img/Yokus island express.png" alt="Stranger Things Season 4.jpeg">
                 <a class="hometext" 
                 href="gaming/neo-dwrean-paixnidi-sto-epic-games-store-3-sept-2021">Νέο δωρεάν παιχνίδι στο Epic Games Store!</a>
                 </div>
@@ -111,8 +88,8 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                     
-                <a href="reviews/To-mr-robot-mia-apo-tis-kaluteres-seires-pou-eida-to-2021"><img class="homeimage" 
-                    src="Posts/Mr.robot_greek_netflix/mr.robot.jpg" alt="Stranger Things Season 4.jpeg">
+                <a href="reviews/To-mr-robot-mia-apo-tis-kaluteres-seires-pou-eida-to-2021"><img class="homeimage lazyload" 
+                    src="Posts/Mr.robot_greek_netflix/mr.robot.jpg" data-src="img/mr.robot.jpg" alt="Stranger Things Season 4.jpeg">
                 <a class="hometext" 
                 href="reviews/To-mr-robot-mia-apo-tis-kaluteres-seires-pou-eida-to-2021">Το Mr.Robot μία από τις καλύτερες σειρές που είδα το 2021 και γιατί</a>
                 </div>
@@ -125,8 +102,8 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                     
-                <a href="gaming/dwrean-to-saints-row-the-third-remastered"><img class="homeimage" 
-                    src="Posts/Free Saints Row The Third Remastered/saint-row-epic-games-free.png" alt="Stranger Things Season 4.jpeg">
+                <a href="gaming/dwrean-to-saints-row-the-third-remastered"><img class="homeimage lazyload" 
+                    src="Posts/Free Saints Row The Third Remastered/saint-row-epic-games-free.png" data-src="img/saint-row-epic-games-free.png" alt="Stranger Things Season 4.jpeg">
                 <a class="hometext" 
                 href="gaming/dwrean-to-saints-row-the-third-remastered">Δωρεάν το Saints Row: The Third Remastered μέσω Epic Games! (κρατήστε το μόνιμα)</a>
                 </div>
@@ -143,8 +120,8 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                     
-                <a href="movies-series/mr-robot-apo-shmera-diathesimo-sto-ellhniko-netflix-aug-2021"><img class="homeimage" 
-                    src="Posts/Mr.robot_greek_netflix/mr.robot greek netflix.png" alt="Stranger Things Season 4.jpeg">
+                <a href="movies-series/mr-robot-apo-shmera-diathesimo-sto-ellhniko-netflix-aug-2021"><img class="homeimage lazyload" 
+                    src="Posts/Mr.robot_greek_netflix/mr.robot greek netflix.png" data-src="img/mr.robot greek netflix.png" alt="Stranger Things Season 4.jpeg">
                 <a class="hometext" 
                 href="movies-series/mr-robot-apo-shmera-diathesimo-sto-ellhniko-netflix-aug-2021">Το Mr.Robot από σήμερα διαθέσιμο στο Ελληνικό Netflix!</a>
                 </div>
@@ -157,8 +134,8 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                     
-                <a href="movies-series/stranger-things-4-coming-in-2022"><img class="homeimage" 
-                    src="Posts/Stranger Things 4 2022/Stranger Things Season 4.jpeg" alt="Stranger Things Season 4.jpeg">
+                <a href="movies-series/stranger-things-4-coming-in-2022"><img class="homeimage lazyload" 
+                    src="Posts/Stranger Things 4 2022/Stranger Things Season 4.jpeg" data-src="img/Stranger Things Season 4.jpeg" alt="Stranger Things Season 4.jpeg">
                 <a class="hometext" 
                 href="movies-series/stranger-things-4-coming-in-2022">Η τέταρτη σεζόν του Stranger Things έρχεται μέσα στο 2022</a>
                 </div>
@@ -171,8 +148,8 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                     
-                <a href="gaming/free-a-plague-tale-innocence-epic-games-aug-2021"><img class="homeimage" 
-                    src="Posts/free A plagute tale innocence epic games/A plagute tale innocence.png" alt="A plagute tale innocence.png">
+                <a href="gaming/free-a-plague-tale-innocence-epic-games-aug-2021"><img class="homeimage lazyload" 
+                    src="Posts/free A plagute tale innocence epic games/A plagute tale innocence.png" data-src="img/A plagute tale innocence.png" alt="A plagute tale innocence.png">
                 <a class="hometext" 
                 href="gaming/free-a-plague-tale-innocence-epic-games-aug-2021">Δωρεάν το πολύ αξιόλογο A Plague Tale: Innocence μέσω Epic Games!</a>
                 </div>
@@ -185,8 +162,8 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                 
-                <a href="gaming/free-gostrunner-limited-time-steam-aug-2021"><img class="homeimage" 
-                    src="Posts/Free limited time ghostrunner/Ghostrunner-steam-free.png" alt="Ghostrunner-steam-free.png">
+                <a href="gaming/free-gostrunner-limited-time-steam-aug-2021"><img class="homeimage lazyload" 
+                    src="Posts/Free limited time ghostrunner/Ghostrunner-steam-free.png" data-src="img/Ghostrunner-steam-free.png" alt="Ghostrunner-steam-free.png">
                 <a class="hometext" 
                 href="gaming/free-gostrunner-limited-time-steam-aug-2021">Κατεβάστε και παίξτε Δωρεάν το Ghostrunner για περιορισμένο χρονικό διάστημα!</a>
                 </div>
@@ -199,8 +176,8 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                     
-                <a href="movies-series/movies-series-greek-netflix-august-2021"><img class="homeimage" 
-                    src="Posts/movies-series/movies series august greek netflix 20221/Netflix-logo-white.png" alt="Netflix-logo-white.png">
+                <a href="movies-series/movies-series-greek-netflix-august-2021"><img class="homeimage lazyload" 
+                    src="Posts/movies-series/movies series august greek netflix 20221/Netflix-logo-white.png" data-src="img/Netflix-logo-white.png" alt="Netflix-logo-white.png">
                 <a class="hometext" 
                 href="movies-series/movies-series-greek-netflix-august-2021">Ταινίες και σείρες στο Ελληνικό Netflix τον Αύγουστο!</a>
                 </div>
@@ -213,8 +190,8 @@
             <div class="homepost-pos">
                   <div class="homepost" >
                     
-                <a href="gaming/2-new-free-games-epic-games-31-7-2021"><img class="homeimage" 
-                    src="/Posts/2 new free games 29.7.2021/2 new free games.png" alt="2 new free games (31.7.2021).png">
+                <a href="gaming/2-new-free-games-epic-games-31-7-2021"><img class="homeimage lazyload" 
+                    src="/Posts/2 new free games 29.7.2021/2 new free games.png" data-src="img/2 new free games.png" alt="2 new free games (31.7.2021).png">
                 <a class="hometext" 
                 href="gaming/2-new-free-games-epic-games-31-7-2021">2 νέα Δωρεάν παιχνίδια στο Epic Games!</a>
               </div>
@@ -227,8 +204,8 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                     
-                <a href="gaming/steamdeck-valve-annoucment-2021"><img class="homeimage" 
-                    src="Posts/Steam Deck/Steam Deck Console.png" alt="Steam Deck Console.png">
+                <a href="gaming/steamdeck-valve-annoucment-2021"><img class="homeimage lazyload" 
+                    src="Posts/Steam Deck/Steam Deck Console.png" data-src="img/Steam Deck Console.png" alt="Steam Deck Console.png">
                 <a class="hometext" 
                 href="gaming/steamdeck-valve-annoucment-2021">Η νέα φορητή κονσόλα της Valve!</a>
                 </div>
@@ -241,8 +218,8 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                     
-                <a href="movies-series/resident-evil-infinite-darkness-netflix-2021"><img class="homeimage" 
-                    src="Posts/RE Infinite Darkness GR Netflix/RE INFINITE DARKNESS NTEFLIX GREECE.png" alt="RE INFINITE DARKNESS NTEFLIX GREECE.png">
+                <a href="movies-series/resident-evil-infinite-darkness-netflix-2021"><img class="homeimage lazyload" 
+                    src="Posts/RE Infinite Darkness GR Netflix/RE INFINITE DARKNESS NTEFLIX GREECE.png" data-src="img/RE INFINITE DARKNESS NTEFLIX GREECE.png" alt="RE INFINITE DARKNESS NTEFLIX GREECE.png">
                 <a class="hometext" 
                 href="movies-series/resident-evil-infinite-darkness-netflix-2021">Έφτασε η νέα Animated σειρά του Resident Evil στο ελληνικό Netflix!</a>
                 </div>
@@ -255,7 +232,7 @@
             <div class="homepost-pos">
                     <div class="homepost" >
                     
-                <a href="tech/windows-11-microsoft-event-jun-2021"><img class="homeimage" src="Posts/Windows 11/Windows 11.jpg" alt="Windows 11.jpg">
+                <a href="tech/windows-11-microsoft-event-jun-2021"><img class="homeimage lazyload" data-src="img/Windows 11.jpg" src="Posts/Windows 11/Windows 11.jpg" alt="Windows 11.jpg">
                 <a class="hometext" href="tech/windows-11-microsoft-event-jun-2021">Windows 11 - Τι ανακοίνωσε η Microsoft</a>
                 </div>
             </div>
@@ -267,7 +244,7 @@
             <div class="homepost-pos">
                 <div class="homepost" >
                     
-                <a href="reviews/review-ghostrunner-pc-2021"><img class="homeimage" src="Posts/Review Ghostrunner PC Post/Ghostrunner Review.png" alt="Ghostrunner Review.png">
+                <a href="reviews/review-ghostrunner-pc-2021"><img class="homeimage lazyload" data-src="img/Ghostrunner Review.png" src="Posts/Review Ghostrunner PC Post/Ghostrunner Review.png" alt="Ghostrunner Review.png">
                 <a class="hometext" href="reviews/review-ghostrunner-pc-2021">Review Ghostrunner (PC Έκδοση)</a>
             </div>
             </div>
