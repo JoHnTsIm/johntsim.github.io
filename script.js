@@ -187,20 +187,3 @@ const getImg = async (page, uri) => {
   });
   return img;
 };
-
-
-// Dark Mode
-function lightMode() {
-  var element = document.body; // body
-  x = element.classList.toggle("light-mode")
-  localStorage.setItem("x", x)
-  }
-  
-  window.onload = function() {
-      if (localStorage.getItem("x") == "true") {
-          lightMode()
-      } 
-  }
-  
-  window.onclick = function(){ 
-  console.log(localStorage.getItem("x"))}
