@@ -5,6 +5,11 @@ html {
     scroll-behavior: smooth;
 }
 
+.light-mode {
+    background-color: #dddddd;
+    color: white;
+  }
+
 body {
     background-color: #221f1f;
     margin: 0;  
