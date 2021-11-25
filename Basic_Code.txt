@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <link rel="icon" href="JT-icon.png">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Link Preview -->
+        <meta property="og:locale" content="el">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Αρχική σελίδα">
+        <meta property="og:description" content="">
+        <meta property="og:site_name" content="JohnTsim">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <!-- ------------------------------------------------------------- -->
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+
+        <script>
+                    function show_hide() {
+            var mobileMenu = document.getElementById("mobile-menu"); 
+            if (mobileMenu.style.width == "280px") {
+            mobileMenu.style.width = "0px";
+            mobileMenu.style.zIndex = 2000;
+            }
+
+            else {
+                mobileMenu.style.width = "280px";
+            } 
+
+        }
+        </script>
+        
+    </head>
+
+    <body>
+        
+
+        <!-- Navbar -->
+        <header>
+
+            <div class="navbar_holder">
+
+                <div class="navbar_container">
+
+                    <div class="navbar">
+
+
+                        <ul>
+
+                            <li onclick="show_hide()" class="display-none-pc" id="menu_toggle">&#9776;</li>
+
+                            <li><a href="index.html"><img src="LOGO WITH TEXT.png" alt=""></a></li>
+                            
+                            <div class="dropdown white_underline display-none-tablet">
+                            <li><a>HTML & CSS <i class="arrow down"></i></a></li>
+                            <div class="dropdown-content">
+                                <a href="">Simple HTML</a>
+                                <a href="">Simple CSS</a>
+                                <!-- <a href=""></a> -->
+                            </div>
+                            </div>
+                            
+                            <div class="dropdown white_underline display-none-tablet">
+                            <li><a>Python</a><i style="margin-left: -3px;" class="arrow down"></i></li>
+                            <div style="margin-left: -30px;" class="dropdown-content">
+                                <a href="">Simple Python</a>
+                                <a href="">Ready Programs</a>
+                                <a href="">Ready Programs (Code)</a>
+                            </div>
+                            </div>
+
+                            <li><a class="white_underline display-none-tablet" href="">Social Media</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- -------------------------------------------------------------------------------------------------------- -->
+
+
+                        <!-- mobile navigation -->
+                        <div id="mobile-menu">
+                            <div class="a-container">
+                                <ul>
+                                    
+                                <li class="display-none-pc"><strong>HTML & CSS</strong></li>
+                                <hr class="display-none-pc">
+
+                                <li class="display-none-pc"><a href="">Simple HTML</a></li>
+                                
+                                
+                                <li class="display-none-pc"><a href="">Simple CSS</a></li>
+                                
+                                <div></div>
+                                
+                                <li class="display-none-pc"><strong>Python</strong></li>
+                                <hr class="display-none-pc">
+
+                                <li class="display-none-pc"><a href="">Simple Python</a></li>
+
+                                
+                                <li class="display-none-pc"><a href="">Ready Programs</a></li>
+                            
+                                <li class="display-none-pc"><a href="">Ready Programs (Code)</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- --------------------------------- -->
+
+        </header>
+        <!------------------------------------------------- end of header ------------------------------------------------------->
+
+        
+        <!-- Main Content -->
+        <main>
+        </main>
+        <!-- ----------------------------------------------------------- -->
+
+
+        <!-- Footer -->
+        <footer>
+
+        </footer>
+        <!-- ----------------------------------------------------------- -->
+
+
+    </body>
+
+</html>
