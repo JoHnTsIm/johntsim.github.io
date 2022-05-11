@@ -139,6 +139,7 @@ label {
 @media (max-width: 1024px) {
     .content {
         width: 720px;
+        margin-top: 120px;
     }
   }
 
