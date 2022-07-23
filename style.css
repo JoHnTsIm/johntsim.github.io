@@ -49,7 +49,7 @@ input {
 }
 
 input[type=text]:focus {
-    border: 5px solid black;
+    border: 5px solid #333;
   }
 
 button {
