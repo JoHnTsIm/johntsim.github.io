@@ -6,4 +6,4 @@ app = Flask(__name__)
 def index():
     return "A random message"
 
-app.run(host="johntsim.github.io")
+app.run(host="0.0.0.0", port=80)
