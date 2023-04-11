@@ -1,113 +1,106 @@
-:root {
-    /* a */
-    --a-line-height: 60px;
-    
-    /* main */
-    --main-background-color: #222;
-
-    /* main-links */
-    --main-links-color: white;
-    --main-links-hover-color: #edac00;
-    --main-links-active-color: #b18200;
-    --main-links-size: 18px;
-
-    /* nav-logo */
-    --nav-logo-width: 200px;
-    --nav-logo-height: auto;
-    --nav-logo-hover-opacity: 80%;
-
-    /* nav-links */
-    --nav-links-display: flex;
-    --nav-links-justify-content: space-between;
-    --nav-links-flex-grow: 0.05;
-    --nav-links-align-items: center;
-    --nav-links-font-family: Arial, Helvetica, sans-serif;
-
-    /* free-games-button */
-    --free-games-button-background-color: #edac00;
-    --free-games-button-font-family: Helvetica;
-    --free-games-button-font-weight: bold;
-    --free-games-button-font-size: 21px;
-    --free-games-button-hover-color: white;
-    --free-games-button-hover-background-color: #ffbb00;
-    --free-games-button-focus-back-background-color: #a77a00;
-    --free-games-button-border-radius: 15px;
-    --free-games-button-height: 45px;
-    --free-games-button-align-items: center;
-}
-
-html {
-    margin: 0;
-}
-
 body {
     margin: 0;
-    padding: 0;
-
-    background-color: var(--main-background-color);
-}
-
-a {
-    display: flex; 
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-
-    padding-left: 10px;
-    padding-right: 10px;
-    color: var(--main-links-color);
-    font-size: var(--main-links-size);
-    line-height: var(--a-line-height);
-}
-a:hover {
-    color: var(--main-links-hover-color);
-}
-a:active {
-    color: var(--main-links-active-color);
-}
-
-#navbar { 
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
     background-color: #333;
-    box-shadow: 2px 1px 2px #111;
 }
 
-.nav-links {
-    display: var(--nav-links-display);
-    justify-content: var(--nav-links-justify-content);
-    align-items: var(--nav-links-align-items);
-    font-family: var(--nav-links-font-family);
-    font-size: var(--nav-links-font-size);
+#content_holder {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 100%;
 }
 
-#nav-logo {
-    width: var(--nav-logo-width);
-    height: var(--nav-logo-height);
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    width: 800px;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #666;
+    box-shadow: 1px 1px 10px 1px rgb(224, 224, 85);
+    padding: 10px;
 }
 
-#nav-logo:hover {
-    opacity: var(--nav-logo-hover-opacity);
+h1 {
+    margin: 0;
+    display: block;
+    color: rgb(99, 162, 192);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    text-shadow: 3px 3px 5px #111;
+    padding: 2%;
+    margin-bottom: 40px;
 }
 
-#free-games-button {
-    background-color: var(--free-games-button-background-color);
-    font-weight: var(--free-games-button-font-weight);
-    font-family:var(--free-games-button-font-family);
-    font-size: var(--free-games-button-font-size);
-    border-radius: var(--free-games-button-border-radius);
-    height: var(--free-games-button-height);
-    align-items: var(--free-games-button-align-items);
+input {
+    font-size: 25px;
+    width: 80%;
+    box-shadow: 1px 1px 5px 1px #333;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    transition: 0.5s;
+    outline: none;
+    border: 5px solid rgb(226, 226, 226);
 }
 
-#free-games-button:hover {
-    color: var(--free-games-button-hover-color);
-    background-color: var(--free-games-button-hover-background-color);
+input[type=text]:focus {
+    border: 5px solid #333;
+  }
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 35px;
+    box-shadow: 1px 1px 5px 1px #333;
+    background-color: rgb(224, 224, 85);
+    border: 0px;
+    border-radius: 10px;
+    font-family:monospace;
+    font-weight:bold;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 40px;
 }
 
-#free-games-button:focus {
-    background-color: var(--free-games-button-focus-back-background-color);
+button:hover {
+    background-color: #333;
+    color: white;
+}
+
+select {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin-bottom: 40px;
+    border: 0px;
+    border-radius: 10px;
+    font-family:monospace;
+    font-weight:bold;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 5px 1px #333;
+    margin-right: 15px;
+}
+
+select:hover {
+    color: white;
+    background-color: #333;
+}
+
+label {
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: 3px 3px 5px #111;
+    display: inline-block;
 }
 
 
@@ -140,34 +133,96 @@ a:active {
 
 
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-position: relative;
-display: inline-block;
+
+
+/* OTHER DEVICES SIZE */
+@media (max-width: 1024px) {
+    .content {
+        width: 720px;
+    }
+  }
+
+@media (max-width: 768px) {
+.content {
+    width: 420px;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: #333;
-min-width: 160px;
-box-shadow: 0px 0px 4px 2px #edac00;
-margin-left: 12px;
-z-index: 1;
+label {
+    font-size: 20px;
+}
+select {
+    padding: 6px;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-color: white;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-line-height: 30px;
+h1 {
+    font-size: 40px;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #222;}
+input {
+    font-size: 18px;
+}
+}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+
+
+
+
+@media (max-width: 480px) {
+.content {
+    width: 270px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+label {
+    font-size: 15px;
+}
+select {
+    padding: 6px;
+    margin-right: 0px;
+    font-size: 15px;
+}
+
+input {
+    font-size: 15px;
+}
+
+button {
+    font-size: 25px;
+}
+}
+
+
+
+
+
+
+
+@media (max-width: 320px) {
+.content {
+    width: 220px;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+label {
+    font-size: 13px;
+}
+select {
+    padding: 6px;
+    margin-right: 0px;
+    font-size: 13px;
+}
+
+input {
+    font-size: 13px;
+}
+
+button {
+    font-size: 23px;
+}
+}
