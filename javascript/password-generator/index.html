@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="passgen-style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+        <script src="passgen-script.js" defer></script>
+        <script src="/script.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    </head>
+
+    <body>
+        
+        <!-- nav starts -->
+        <nav>
+            <div id="navbar">
+                <a href="/index.html"><img id="nav-logo" src="/images/johntsimTransparent.png" alt=""></a>
+                
+                <div id="nav-links">
+                    
+                    <a href="/python.html">Python</a>
+
+                    <a href="/java.html">Java</a>
+
+                    <a style="color: #edac00;" href="/javascript.html">Javascript</a>
+
+                    <a id="free-games-button" href="/free-games.html">Free Games</a>
+
+                </div>
+
+            </div>
+
+            <div id="nav-mobile">
+                
+                <div id="nav-links-mobile">
+                    
+                    <a href="/python.html">Python</a>
+
+                    <a href="/java.html">Java</a>
+
+                    <a style="color: #edac00;" href="/javascript.html">Javascript</a>
+
+                    <a id="free-games-button" href="/free-games.html">Free Games</a>
+
+                </div>
+
+                <a id="menu-button" onclick="toggleMenu()" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+            </div>
+        </nav>
+        <!-- nav ends -->
+
+
+        <div id="content_holder">
+            <div class="content">
+                <h1>Password Generator</h1>
+
+                <label>Password Length</label>
+                <select id="password_length" name="password_length">
+                </select>
+                  
+                <label>Password Strength</label>
+                <select id="password_strength" name="password_strength">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select><br>
+                
+                    <input id="password_input" type="text" readonly><button onclick="copyPassword()" id="copy-button">Copy</button>
+                <button onclick="generatePassword()">Generate</button>
+            </div>
+        </div>
+    </body>
+    
+</html>

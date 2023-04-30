@@ -1,2 +1,1 @@
-# RandomPasswordGenerator
-Simple Password Generator Project (HTML, CSS, Javascript)
+Website with content about python, java, javascript, free games of the week
