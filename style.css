@@ -163,7 +163,7 @@
     --wrapper-background-color: #333;
     --wrapper-max-width: 1020px;
     --wrapper-text-align: center;
-    --wrapper-border-radius: 15px;
+    --wrapper-border-radius: 20px;
     --wrapper-margin-bottom: 40px;
 
     /* wrapper-div */
@@ -394,6 +394,21 @@ h2 {
     opacity: var(--grid-box-hover-opacity);
   }
 
+  #python-image {
+    border-top-left-radius: 15px;
+  }
+
+  #java-image {
+    border-top-right-radius: 15px;
+  }
+
+  #javascript-image {
+    border-bottom-left-radius: 15px;
+  }
+
+  #free-games-image {
+    border-bottom-right-radius: 15px;
+  }
 
 
 
@@ -402,7 +417,7 @@ h2 {
 
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1038px) {
     #navbar {
         flex-direction: column;
         margin-bottom: 0px;
@@ -469,6 +484,25 @@ h2 {
     .wrapper {
         width:min-content
     }
+
+    #python-image {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+    
+    #java-image {
+    border-top-right-radius: 0px;
+    }
+
+    #javascript-image {
+    border-bottom-left-radius: 0px;
+    }
+
+    #free-games-image {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    }
+    
   }
 
 
