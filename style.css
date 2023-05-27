@@ -101,8 +101,8 @@
     --game-box-shadow: 2px 1px 2px #111;
 
     /* game-image */
-    --game-image-width: 350px;
-    --game-image-height: 250px;
+    --game-image-width: 260px;
+    --game-image-height: 100px;
     --game-image-background: transparent no-repeat center;
     --game-image-background-size: cover;
 
@@ -111,7 +111,7 @@
     --game-title-text-overflow: ellipsis;
     --game-title-white-space: nowrap;
     --game-title-line-height: 30px;
-    --game-title-width: 330px;
+    --game-title-width: 220px;
 
     --game-title-margin: 0;
     --game-title-padding: 10px;
@@ -139,6 +139,7 @@
     --post-padding: 10px;
 
     /* h2 */
+    
     --h2-font-family:Georgia, 'Times New Roman', Times, serif;
 
     /* post-image */
@@ -546,13 +547,13 @@ h2 {
 
 @media only screen and (max-width: 350px) {
     .game-image {
-        width: 350px;
-        height: 250px;
+        width: 230px;
+        height: 90px;
     }
 
     .game {
         overflow: hidden;
-        width: 250px;
+        width: 230px;
     }
 
     #games_grid > .game {
@@ -560,7 +561,7 @@ h2 {
     }
 
     .game-title {
-        width: 230px;
+        width: 200px;
     }
 
     h2 {
