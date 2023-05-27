@@ -531,10 +531,6 @@ h2 {
 
     .grid-box {
         width: 310px;
-      }
-
-      h2 {
-        font-size: 0.9em;
     }
 }
 
@@ -564,5 +560,9 @@ h2 {
 
     .grid-box {
         width: 210px;
-      }
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
 }
