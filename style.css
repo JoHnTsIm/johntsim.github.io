@@ -111,7 +111,7 @@
     --game-title-text-overflow: ellipsis;
     --game-title-white-space: nowrap;
     --game-title-line-height: 30px;
-    --game-title-width: 220px;
+    --game-title-width: 240px;
 
     --game-title-margin: 0;
     --game-title-padding: 10px;
@@ -550,7 +550,7 @@ h2 {
     }
 
     .game-title {
-        width: 200px;
+        width: 210px;
     }
 
     /* posts */
@@ -564,5 +564,10 @@ h2 {
 
     h2 {
         font-size: 0.9em;
+    }
+
+    .heading_h1 {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
