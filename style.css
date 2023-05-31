@@ -504,7 +504,7 @@ h2 {
   }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 656px) {
     .heading_h1 {
         font-size: 12px;
     }
@@ -516,6 +516,11 @@ h2 {
 
     .grid-box {
         width: 410px;
+    }
+
+    .heading_h1 {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
 
@@ -564,10 +569,5 @@ h2 {
 
     h2 {
         font-size: 0.9em;
-    }
-
-    .heading_h1 {
-        margin-left: 5px;
-        margin-right: 5px;
     }
 }
