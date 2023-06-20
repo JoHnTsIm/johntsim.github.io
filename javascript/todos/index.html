@@ -1,0 +1,37 @@
+<!-- * A Simple To-Do List App -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
+
+    <title>toDoApp</title>
+</head>
+    <body>
+        <div class="content">
+            <h1 id="app_title">Simple toDo App</h1>
+
+            <ul id="todo-list">    
+            </ul>
+
+            <input id="todo_input" type="text" placeholder="type a todo to add"> <button class="fa fa-plus add_button" onclick="addToDo()"></button><br>
+            <button id="clear_input_button" onclick="clearTodoInput()">Clear Input</button><button id="clear_list_button" onclick="clearTodoList()">Clear toDo List</button>
+            
+            <br>
+            <br>
+            <br>
+            <h2><u>Shortcuts</u></h2>
+            <p>Alt + a = Add Task</p>
+            <p>Alt + c = Clear Todo Input</p>
+            <p>Alt + x = Delete All Todos</p>
+            <br>
+            <br>
+            <a class="fa fa-arrow-left" id="go_back_button" href="/javascript.html"> Go back</a>
+        </div>
+    </body>
+</html>

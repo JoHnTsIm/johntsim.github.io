@@ -27,6 +27,26 @@ body {
     margin-bottom: 40px;
 }
 
+.center {
+    text-align: center;
+}
+
+#go_back_button {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+#go_back_button:hover {
+    color: #ffcf49;
+    background-color: black;
+}
+
 h1 {
     margin: 0;
     display: block;

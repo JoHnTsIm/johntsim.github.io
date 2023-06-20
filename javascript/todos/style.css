@@ -1,0 +1,173 @@
+body {
+    background-color: #222;
+    color: white;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#app_title {
+    font-size: 45px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+#go_back_button {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#go_back_button:hover {
+    color: #ffcf49;
+    background-color: black;
+}
+
+li {
+    list-style-type: none;
+    word-break: break-all;
+}
+
+.done_li {
+    color: rgb(85, 85, 85);
+    text-decoration: line-through;
+    list-style-type: none;
+}
+
+.list_li {
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+} 
+
+/* REMOVE BUTTON */
+.remove_button {
+    background-color: #ed5e68;
+    color: white;
+    border: 0px;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+.remove_button:hover {
+    background-color: #ff7780;
+}
+
+/* CHECK BUTTON */
+.check_button {
+    background-color: #2ecc71;
+    color: white;
+    border: 0px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.check_button:hover {
+    background-color: #4de78e;
+}
+
+/* UNDO BUTTON */
+.undo_button {
+    background-color: white;
+    color: black;
+    border: 0px;
+    padding: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.undo_button:hover {
+    background-color: rgb(177, 177, 177);
+}
+
+.add_button {
+    background-color: #ffbb00;
+    color: black;
+    padding: 8px;
+    padding-left: 9px;
+    padding-right: 9px;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add_button:hover {
+    background-color: #ffcf49;
+}
+
+#clear_input_button {
+    background-color: #4075ff;
+    color: white;
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 122px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#clear_input_button:hover {
+    background-color: #7099ff;
+    color: white;
+}
+
+#clear_list_button {
+    background-color: #f89917;
+    color: white;
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 122px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#clear_list_button:hover {
+    background-color: #ffb349;
+    color: white;
+}
+
+#todo_input {
+    font-size: 17px;
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    word-spacing: 2px;
+}
+
+#todo_input:focus {
+    outline: none;
+}
+
+@media (max-width: 400px) {
+    #app_title {
+        font-size: 35px;
+        font-family:Arial, Helvetica, sans-serif
+    }
+}
+
+@media (max-width: 330px) {
+    #app_title {
+        font-size: 30px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+}
