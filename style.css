@@ -133,7 +133,7 @@
     /* post */
     --post-display: flex;
     --post-flex-direction: column;
-    --post-margin-top: 40px;
+    --post-margin-bottom: 40px;
     --post-background-color: #333;
     --post-border-radius: 15px;
     --post-padding: 10px;
@@ -281,7 +281,7 @@ a:active {
     padding-right: var(--heading_h1-padding-right);
     border-radius: var(--heading_h1-border-radius);
     font-family: var(--heading_h1-font-family);
-
+    margin-bottom: 40px;
     color: var(--heading_h1-color);
     background-color: var(--heading_h1-background-color);
 }
@@ -344,7 +344,7 @@ a:active {
 .post {
     display: var(--post-display);
     flex-direction: var(--post-flex-direction);
-    margin-top: var(--post-margin-top);
+    margin-bottom: var(--post-margin-bottom);
     background-color: var(--post-background-color);
     border-radius: var(--post-border-radius);
     padding: var(--post-padding);
