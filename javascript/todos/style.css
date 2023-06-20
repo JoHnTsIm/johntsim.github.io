@@ -14,6 +14,7 @@ body {
     font-family:Arial, Helvetica, sans-serif
 }
 
+/* GO BACK BUTTON */
 #go_back_button {
     text-align: center;
     color: white;
@@ -95,6 +96,7 @@ li {
     background-color: rgb(177, 177, 177);
 }
 
+/* PLUS BUTTON */
 .add_button {
     background-color: #ffbb00;
     color: black;
@@ -110,6 +112,7 @@ li {
     background-color: #ffcf49;
 }
 
+/* CLEAR INPUT BUTTON */
 #clear_input_button {
     background-color: #4075ff;
     color: white;
@@ -128,6 +131,7 @@ li {
     color: white;
 }
 
+/* CLEAR TODO LIST BUTTON */
 #clear_list_button {
     background-color: #f89917;
     color: white;
@@ -144,6 +148,7 @@ li {
     color: white;
 }
 
+/* TODO INPUT */
 #todo_input {
     font-size: 17px;
     border-radius: 5px;
@@ -158,6 +163,8 @@ li {
     outline: none;
 }
 
+
+/* FOR MOBILE */
 @media (max-width: 400px) {
     #app_title {
         font-size: 35px;
