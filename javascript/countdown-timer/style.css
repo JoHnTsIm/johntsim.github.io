@@ -1,0 +1,197 @@
+body {
+    background-color: #333;
+    color: white;
+    margin: 0;
+}
+
+.content {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #666;
+    padding: 2%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px #edac00;
+}
+
+#time {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    margin: 5px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    margin: 0;
+    text-shadow: 3px 3px 5px #111;
+}
+
+button {
+    border: 0px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    box-shadow: 1px 1px 5px 1px #333;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+/* START BUTTON */
+#start-button {
+    background-color: #edac00;
+}
+
+#start-button:hover {
+    background-color: #ffcf49;
+}
+
+#start-button:active {
+    background-color: #9c7300;
+}
+
+/* PAUSE BUTTON */
+#pause-button {
+    background-color: #ed5e68;
+}
+#pause-button:hover {
+    background-color: #ff7780;
+}
+#pause-button:active {
+    background-color: #a54249;
+}
+
+/* RESET BUTTON */
+#reset-button {
+    background-color: rgb(73, 170, 73);
+}
+
+#reset-button:hover {
+    background-color: rgb(85, 197, 85);
+}
+
+#reset-button:active {
+    background-color: rgb(59, 134, 59);
+}
+
+select {
+    font-size: 15px;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+select:hover {
+    background-color: white;
+}
+
+#hours {
+    margin: 0;
+}
+
+#minutes {
+    margin: 0;
+}
+
+#seconds {
+    margin: 0;
+}
+
+/* GO BACK BUTTON */
+#go_back_button {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#go_back_button:hover {
+    color: #ffcf49;
+    background-color: black;
+}
+
+#code_here {
+    font-size: 25px;
+    background-color: white;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#code_here:hover {
+    background-color: rgb(197, 197, 197);
+}
+
+#info-buttons {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE */
+@media (max-width: 650px) {
+    .content {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #time {
+        font-size:30px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    span {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 250px) {
+    .content {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #time {
+        font-size:25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
