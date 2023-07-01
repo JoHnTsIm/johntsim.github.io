@@ -263,7 +263,7 @@ a:active {
 }
 
 
-/* free games grid */
+/** free games grid */
 .content {
     display: var(--content-display);
     flex-direction: var(--content-flex-direction);
@@ -335,7 +335,7 @@ a:active {
 }
 
 
-/* posts */
+/** posts */
 .posts {
     display: var(--posts-display);
     flex-direction: var(--posts-flex-direction);
@@ -415,6 +415,117 @@ h2 {
 
 
 
+/** carousel */
+#carousel-title {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    background-color: #333;
+    max-width: 340px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#carousel_dots {
+    overflow: hidden;
+    position: relative;
+    transform: translateY(-50px);
+    text-align: center;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(199, 199, 199);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 2px 2px #333;
+    margin-right: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.selected {
+    background-color: white;
+    opacity: 1;
+}
+
+.dot:hover {
+    background-color: white;
+    opacity: 0.7;
+}
+
+.dot:active {
+    background-color: rgb(94, 94, 94);
+}
+
+#carousel{
+    overflow: hidden;
+    position: relative;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 370px;
+    width: 100%;
+}
+
+.carousel_item {
+    display: none;
+}
+
+/* img {
+    box-shadow: 5px 5px 10px #edac00
+} */
+
+#carousel .carousel_item img {
+    position: relative;
+    max-width: 360px;
+    width: 100%;
+    border-radius: 10px;
+    height: 180px;
+}
+
+.visible {
+    display: block;
+    animation: fadeVisibility 2s;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -484,16 +595,16 @@ h2 {
     }
 
     #python-image {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
       }
     
     #java-image {
-    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
     }
 
     #javascript-image {
-    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
     }
 
     #free-games-image {
