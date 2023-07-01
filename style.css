@@ -397,15 +397,15 @@ h2 {
   }
 
   #python-image {
-    border-top-left-radius: 15px;
-  }
-
-  #java-image {
     border-top-right-radius: 15px;
   }
 
-  #javascript-image {
+  #java-image {
     border-bottom-left-radius: 15px;
+  }
+
+  #javascript-image {
+    border-top-left-radius: 15px;
   }
 
   #free-games-image {
