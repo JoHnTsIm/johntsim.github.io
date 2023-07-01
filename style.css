@@ -611,7 +611,6 @@ h2 {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     }
-    
   }
 
 
@@ -680,5 +679,9 @@ h2 {
 
     h2 {
         font-size: 0.9em;
+    }
+
+    #carousel .carousel_item img {
+        height: 140px;
     }
 }
