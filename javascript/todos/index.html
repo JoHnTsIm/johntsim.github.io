@@ -1,6 +1,7 @@
 <!-- * A Simple To-Do List App -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,32 +13,29 @@
 
     <title>toDoApp</title>
 </head>
-    <body>
-        <div class="content">
-            <h1 id="app_title">Simple toDo App</h1>
 
-            <ul id="todo-list">    
+<body>
+    <div class="content">
+        <h1 id="app_title">Simple toDo App</h1>
+
+        <div id="form_holder">
+            <ul id="todo-list">
             </ul>
 
-            <input id="todo_input" type="text" placeholder="type a todo to add"> <button class="fa fa-plus add_button" onclick="addToDo()"></button><br>
-            <button id="clear_input_button" onclick="clearTodoInput()">Clear Input</button><button id="clear_list_button" onclick="clearTodoList()">Clear toDo List</button>
-            
-            <br>
-            <br>
-            <br>
-            <h2><u>Shortcuts</u></h2>
-            <p>Alt + a = Add Task</p>
-            <p>Alt + c = Clear Todo Input</p>
-            <p>Alt + x = Delete All Todos</p>
-            <br>
-            <br>
-            <a class="fa fa-arrow-left" id="go_back_button" href="/javascript.html"> Go back</a>
-            <br>
-            <br>
-            <b><a target="_blank" id="code_here" href="https://github.com/JoHnTsIm/Todos">Code Here</a></b>
-            <br>
-            <br>
-            Project Idea Credits - <a target="_blank" href="https://www.makeuseof.com/javascript-beginner-project-ideas/">Here</a>
+            <input id="todo_input" type="text" placeholder="type a todo to add"> <button class="fa fa-plus add_button"
+                id="addTodoButton"></button><br>
+            <button id="clear_input_button" onclick="clearTodoInput()">Clear Input</button><button
+                id="clear_list_button" onclick="clearTodoList()">Clear toDo List</button>
         </div>
-    </body>
+
+        <br>
+        <br>
+        <br>
+        <h2><u>Keyboard Shortcuts</u></h2>
+        <p>Alt + a = Add Task</p>
+        <p>Alt + c = Clear Todo Input</p>
+        <p>Alt + x = Delete All Todos</p>
+    </div>
+</body>
+
 </html>

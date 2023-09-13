@@ -1,31 +1,21 @@
 body {
     background-color: #222;
     color: white;
-}
-
-a {
-    color: #ffbb00;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-a:hover {
-    color: #ffcf49;
-}
-
-.content {
+  }
+  
+  .content {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-
-#app_title {
+  }
+  
+  #app_title {
     font-size: 45px;
-    font-family:Arial, Helvetica, sans-serif
-}
-
-/* GO BACK BUTTON */
-#go_back_button {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* GO BACK BUTTON */
+  #go_back_button {
     text-align: center;
     color: white;
     text-decoration: none;
@@ -33,51 +23,44 @@ a:hover {
     border: 2px solid white;
     padding: 5px;
     border-radius: 5px;
-}
-
-#go_back_button:hover {
+  }
+  
+  #go_back_button:hover {
     color: #ffcf49;
     background-color: black;
-}
-
-#code_here {
-    font-size: 25px;
-    background-color: white;
-    color: black;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    border-radius: 5px;
-    padding: 10px;
-    text-decoration: none;
-}
-
-#code_here:hover {
-    background-color: rgb(197, 197, 197);
-}
-
-
-li {
+  }
+  
+  li {
     list-style-type: none;
     word-break: break-all;
-}
-
-.done_li {
+  }
+  
+  .done_li {
     color: rgb(85, 85, 85);
     text-decoration: line-through;
     list-style-type: none;
-}
-
-.list_li {
+  }
+  
+  #todo-list {
+    padding-left: 0px;
+  }
+  
+  .list_li {
     font-size: 20px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
     margin-bottom: 5px;
     text-transform: capitalize;
-} 
-
-/* REMOVE BUTTON */
-.remove_button {
+  }
+  
+  #form_holder {
+    margin-left: auto;
+    margin-right: auto;
+    width: 326px;
+  }
+  
+  /* REMOVE BUTTON */
+  .remove_button {
     background-color: #ed5e68;
     color: white;
     border: 0px;
@@ -87,28 +70,28 @@ li {
     cursor: pointer;
     border-radius: 5px;
     margin-right: 3px;
-}
-
-.remove_button:hover {
+  }
+  
+  .remove_button:hover {
     background-color: #ff7780;
-}
-
-/* CHECK BUTTON */
-.check_button {
+  }
+  
+  /* CHECK BUTTON */
+  .check_button {
     background-color: #2ecc71;
     color: white;
     border: 0px;
     padding: 5px;
     cursor: pointer;
     border-radius: 5px;
-}
-
-.check_button:hover {
+  }
+  
+  .check_button:hover {
     background-color: #4de78e;
-}
-
-/* UNDO BUTTON */
-.undo_button {
+  }
+  
+  /* UNDO BUTTON */
+  .undo_button {
     background-color: white;
     color: black;
     border: 0px;
@@ -117,30 +100,30 @@ li {
     padding-right: 6px;
     cursor: pointer;
     border-radius: 5px;
-}
-
-.undo_button:hover {
+  }
+  
+  .undo_button:hover {
     background-color: rgb(177, 177, 177);
-}
-
-/* PLUS BUTTON */
-.add_button {
+  }
+  
+  /* PLUS BUTTON */
+  .add_button {
     background-color: #ffbb00;
     color: black;
-    padding: 8px;
+    padding: 7.5px;
     padding-left: 9px;
     padding-right: 9px;
     border: 0px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.add_button:hover {
+  }
+  
+  .add_button:hover {
     background-color: #ffcf49;
-}
-
-/* CLEAR INPUT BUTTON */
-#clear_input_button {
+  }
+  
+  /* CLEAR INPUT BUTTON */
+  #clear_input_button {
     background-color: #4075ff;
     color: white;
     padding: 5px;
@@ -149,59 +132,102 @@ li {
     cursor: pointer;
     margin-top: 5px;
     margin-right: 5px;
-    width: 122px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#clear_input_button:hover {
+    width: 35%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  #clear_input_button:hover {
     background-color: #7099ff;
     color: white;
-}
-
-/* CLEAR TODO LIST BUTTON */
-#clear_list_button {
+  }
+  
+  /* CLEAR TODO LIST BUTTON */
+  #clear_list_button {
     background-color: #f89917;
     color: white;
     padding: 5px;
     border: 0px;
     border-radius: 5px;
     cursor: pointer;
-    width: 122px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#clear_list_button:hover {
+    width: 40%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  #clear_list_button:hover {
     background-color: #ffb349;
     color: white;
-}
-
-/* TODO INPUT */
-#todo_input {
+  }
+  
+  /* TODO INPUT */
+  #todo_input {
     font-size: 17px;
     border-radius: 5px;
     border: 0px;
     padding: 5px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     word-spacing: 2px;
-}
-
-#todo_input:focus {
+  }
+  
+  #todo_input:focus {
     outline: none;
-}
-
-
-/* FOR MOBILE */
-@media (max-width: 400px) {
+  }
+  
+  /* FOR MOBILE */
+  @media (max-width: 400px) {
     #app_title {
-        font-size: 35px;
-        font-family:Arial, Helvetica, sans-serif
+      font-size: 35px;
+      font-family: Arial, Helvetica, sans-serif;
     }
-}
-
-@media (max-width: 330px) {
+  }
+  
+  @media (max-width: 340px) {
     #app_title {
-        font-size: 30px;
-        font-family:Arial, Helvetica, sans-serif;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
     }
-}
+  
+    #form_holder {
+      width: auto;
+    }
+  
+    #todo_input {
+      width: 79%;
+      margin-bottom: 5px;
+    }
+  
+    #todo_input::placeholder {
+      font-size: 15px;
+    }
+  
+    .add_button {
+      width: 83%;
+      margin-bottom: 5px;
+    }
+  
+    #clear_input_button {
+      width: 83%;
+      margin-right: 0px;
+      margin-top: 0px;
+      margin-bottom: 5px;
+    }
+  
+    #clear_list_button {
+      width: 83%;
+    }
+  
+    .list_li {
+      font-size: 16px;
+    }
+  
+    u {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 12px;
+    }
+  }
+  
