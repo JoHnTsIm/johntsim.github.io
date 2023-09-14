@@ -110,9 +110,13 @@ body {
   .add_button {
     background-color: #ffbb00;
     color: black;
-    padding: 7.5px;
+    /* padding: 7.5px;
     padding-left: 9px;
-    padding-right: 9px;
+    padding-right: 9px; */
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 0px;
     border-radius: 5px;
     cursor: pointer;

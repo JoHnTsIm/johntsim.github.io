@@ -133,9 +133,11 @@ function loadFromLocalStorage() {
     if (localStorage.getItem('todoTextArray') != "") {
         if (JSON.parse(localStorage.getItem('todoTextArray')) != "") {
             todoTextArray = JSON.parse(localStorage.getItem('todoTextArray'));
-            todoTextArray.forEach(function (text) {
-                addToDo(text);
-            });
+            if (todoTextArray != null) {
+                todoTextArray.forEach(function (text) {
+                    addToDo(text);
+                });
+            }
         }
     }
     if (localStorage.getItem('todoDoneState') != "" &&
