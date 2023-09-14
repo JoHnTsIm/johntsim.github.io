@@ -92,7 +92,7 @@ function updateTodoList() {
                 var node = liNodes[index];
                 var textContentOfNode = node.textContent;
                 if (textContentOfNode != null) {
-                    todoTextArray.push(textContentOfNode.replace(" ", ""));
+                    todoTextArray.push(textContentOfNode);
                     localStorage.setItem('todoTextArray', JSON.stringify(todoTextArray));
                 }
             }
