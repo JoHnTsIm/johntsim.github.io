@@ -179,6 +179,11 @@ li {
   outline: none;
 }
 
+
+
+
+
+
 /* FOR MOBILE */
 @media (max-width: 400px) {
   #app_title {
@@ -191,12 +196,14 @@ li {
   }
 
   #todo_input {
+    /* font-size: 15px; */
     width: 79%;
     margin-bottom: 5px;
   }
 
   #todo_input::placeholder {
-    font-size: 15px;
+    font-size: 17px;
+    color: black;
   }
 
   .add_button {
