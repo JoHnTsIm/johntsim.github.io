@@ -88,7 +88,6 @@
     --games_grid-margin-left: auto;
     --games_grid-margin-right: auto;
     --games_grid-max-width: 1200px;
-    --games_grid-margin-top: 30px;
     --games_grid-flex-wrap: wrap;
     --games_grid-justify-content: center;
 
@@ -281,8 +280,8 @@ a:active {
     padding-right: var(--heading_h1-padding-right);
     border-radius: var(--heading_h1-border-radius);
     font-family: var(--heading_h1-font-family);
-    margin-bottom: 40px;
     color: var(--heading_h1-color);
+    margin-bottom: 20px;
     background-color: var(--heading_h1-background-color);
 }
 
@@ -420,7 +419,6 @@ h2 {
 #carousel{
     overflow: hidden;
     position: relative;
-    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     max-width: 370px;
@@ -543,7 +541,6 @@ h2 {
 @media only screen and (max-width: 1065px) {
     #navbar {
         flex-direction: column;
-        margin-bottom: 0px;
     }
 
     #nav-mobile {
@@ -552,8 +549,7 @@ h2 {
         --a-line-height: 50px;
         justify-content:var(--navbar-justify-content);
         background-color: var(--navbar-background-color);
-        margin-bottom: var(--navbar-margin-bottom);
-        box-shadow: 2px 1px 2px #111;
+        width: 100%;
     }
 
     #nav-links {
@@ -623,6 +619,10 @@ h2 {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     }
+
+    .game-link-button {
+        font-size: 17px;
+    }
   }
 
 
@@ -659,6 +659,10 @@ h2 {
     .grid-box {
         width: 310px;
     }
+
+    .game-link-button {
+        font-size: 15px;
+    }
 }
 
 @media only screen and (max-width: 380px) {
@@ -678,6 +682,7 @@ h2 {
 
     .game-title {
         width: 210px;
+        font-size: 18px;
     }
 
     /* posts */
@@ -710,12 +715,8 @@ h2 {
     #carousel_dots {
         transform: translateY(-50px);
     }
-    
-    /* #carousel .carousel_item img {
-        position: relative;
-        max-width: 360px;
-        width: 100%;
-        border-radius: 10px;
-        height: 150px;
-    } */
+
+    .game-link-button {
+        font-size: 14px;
+    }
 }
