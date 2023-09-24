@@ -173,7 +173,7 @@
     --grid-box-width: 510px;
 
     /* grid-box-hover */
-    --grid-box-hover-opacity: 80%;
+    --grid-box-hover-opacity: 60%;
 }
 
 html {
@@ -445,6 +445,10 @@ h2 {
     width: 100%;
     border-radius: 10px;
     height: 180px;
+}
+
+#carousel img:hover {
+    opacity: 60%;
 }
 
 .visible {
