@@ -637,7 +637,7 @@ h2 {
     }
 
     .wrapper {
-        width:90%;
+        width:94%;
     }
 
     .grid-box {
@@ -660,9 +660,9 @@ h2 {
         width: 300px;
     }
 
-    /* .grid-box {
-        width: 310px;
-    } */
+    .wrapper {
+        width:90%;
+    }
 
     .game-link-button {
         font-size: 15px;
