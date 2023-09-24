@@ -154,7 +154,7 @@
 
     /* wrapper */
     --wrapper-display: flex;
-    --wrapper-padding: 10px;
+    --wrapper-padding: 5px;
     --wrapper-margin-left: auto;
     --wrapper-margin-right: auto;
     --wrapper-flex-wrap: wrap;
@@ -599,7 +599,7 @@ h2 {
     }
 
     .wrapper {
-        width:min-content
+        width:min-content;
     }
 
     #python-image {
@@ -626,18 +626,22 @@ h2 {
   }
 
 
-@media only screen and (max-width: 656px) {
+@media only screen and (max-width: 520px) {
     .heading_h1 {
         font-size: 12px;
     }
 
     /* posts */
     .post-image {
-        width: 400px;
+        max-width: 400px;
+    }
+
+    .wrapper {
+        width:90%;
     }
 
     .grid-box {
-        width: 410px;
+        width: 100%;
     }
 
     .heading_h1 {
@@ -656,9 +660,9 @@ h2 {
         width: 300px;
     }
 
-    .grid-box {
+    /* .grid-box {
         width: 310px;
-    }
+    } */
 
     .game-link-button {
         font-size: 15px;
@@ -690,9 +694,9 @@ h2 {
         width: 220px;
     }
 
-    .grid-box {
+    /* .grid-box {
         width: 210px;
-    }
+    } */
 
     h2 {
         font-size: 0.9em;
