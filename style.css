@@ -138,7 +138,6 @@
     --post-padding: 10px;
 
     /* h2 */
-    
     --h2-font-family:Georgia, 'Times New Roman', Times, serif;
 
     /* post-image */
@@ -352,7 +351,7 @@ a:active {
 
 h2 {
     font-family: var(--h2-font-family);
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 .post-image {
@@ -688,10 +687,10 @@ h2 {
         margin-right: 0px;
     }
 
-    .game-title {
+    /* h2 .game-title {
         width: 210px;
-        font-size: 18px;
-    }
+        font-size: px;
+    } */
 
     /* posts */
     .post-image {
