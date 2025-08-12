@@ -1,14 +1,16 @@
 import { Fetch } from "./fetch.js";
 
 class UI extends Fetch {
-    private api_url: string = "https://crane-capital-buck.ngrok-free.app/api/items.php?action=";
-    
+    private itemInputText = "";
+    private dataPrevious: Array<any> = [];
+
+    // * ELEMENTS
     private itemsList = document.getElementById('itemsList');
     private removeAllBtn = document.getElementById('removeAllBtn');
     private addItemBtn = document.getElementById('addItemBtn');
     private allDoneBtn = document.getElementById('allDoneBtn');
     private allUndoneBtn = document.getElementById('allUndoneBtn');
-    private dataPrevious: Array<any> = [];
+    private itemInputElement = document.getElementById('itemNameInput');
 
     constructor() {
         super();
@@ -132,15 +134,12 @@ class UI extends Fetch {
     }
 
     private addItemToList = async () => {
-        // Item Input TEXT
-        let itemInputText = "";
-        const itemInputElement: HTMLElement | null = document.getElementById('itemNameInput');
-        if (itemInputElement instanceof HTMLInputElement) {
-            itemInputText = itemInputElement.value;
+        if (this.itemInputElement instanceof HTMLInputElement) {
+            this.itemInputText = this.itemInputElement.value;
         }
 
 
-        await this.fetchAddItem(itemInputText);
+        await this.fetchAddItem(this.itemInputText);
         await this.displayItemsChanges();
     }
 

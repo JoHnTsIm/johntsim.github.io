@@ -60,12 +60,26 @@ class UI extends Fetch {
                 this.itemsList.appendChild(newDiv);
             }
         });
+        // private addItemToDom = (itemInputText:string) => {
+        //     const newDiv = document.createElement('div');
+        //     newDiv.classList.add('item', 'pr-2', 'shadow-md', 'focus:brightness-70');
+        //     const newParagraph = document.createElement('p');
+        //     newParagraph.classList.add('items', 'text-2xl', 'cursor-pointer', 'item-default', 'w-[100%]', 'p-2', 'select-none');
+        //     newParagraph.textContent = itemInputText;
+        //     newDiv.appendChild(newParagraph);
+        //     this.itemsList?.appendChild(newDiv)
+        // }
         this.addItemToList = () => __awaiter(this, void 0, void 0, function* () {
+            // Item Input TEXT
+            // let itemInputText = "";
+            // const itemInputElement: HTMLElement | null = document.getElementById('itemNameInput');
             if (this.itemInputElement instanceof HTMLInputElement) {
                 this.itemInputText = this.itemInputElement.value;
             }
             yield this.fetchAddItem(this.itemInputText);
             yield this.displayItemsChanges();
+            // await this.displayItemsChanges();
+            // this.addItemToDom(this.itemInputText)
         });
         this.removeItemFromList = (itemId) => __awaiter(this, void 0, void 0, function* () {
             yield this.fetchRemoveItem(itemId);
