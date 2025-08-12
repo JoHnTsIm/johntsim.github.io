@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #222; */
+    /* background-color: #4fa2ff; */
+    background-color: #dfe6e9;
+    /* background-color: white; */
+
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    filter: brightness(0) saturate(100%) invert(98%) sepia(23%) saturate(3%) hue-rotate(179deg) brightness(115%) contrast(100%);
+    width: 22px;
+    height: 22px;
+    max-width: none;
+}
+
+.icon-b {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(15%) saturate(14%) hue-rotate(19deg) brightness(95%) contrast(83%);
+    width: 22px;
+    height: 22px;
+    max-width: none;
+}
+
+.negative {
+    filter: brightness(0) saturate(100%) invert(63%) sepia(57%) saturate(1373%) hue-rotate(313deg) brightness(104%) contrast(102%);
+}
+
+.icon .positive {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(890%) hue-rotate(61deg) brightness(99%) contrast(104%);
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #3f58c7;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.item-erased {
+    color: #323232;
+    text-decoration: line-through;
+}
+
+.item-default {
+    color: white;
+}
+
