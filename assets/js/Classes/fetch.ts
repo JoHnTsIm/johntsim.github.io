@@ -1,9 +1,17 @@
 export class Fetch {
-    private url: string = "https://crane-capital-buck.ngrok-free.app/api/items.php?action=";
+    private file: string = "";
+    private action: string  = "";
+    private url: string = "https://crane-capital-buck.ngrok-free.app/api/";
 
+
+    // * ITEMS
     protected async fetchAllItems() {
+        this.file = "items.php";
+        this.action = "?action=loadItems";
+        
+
         try {
-            const response = await fetch(this.url + "loadItems", {
+            const response = await fetch(this.url + this.file + this.action, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',
@@ -24,9 +32,12 @@ export class Fetch {
         }
     }
 
-    protected async fetchAddItem(itemInputText: string) { 
+    protected async fetchAddItem(itemInputText: string) {
+        this.file = "items.php";
+        this.action = "?action=addItem";
+
         try {
-            const response = await fetch(this.url + "addItem", {
+            const response = await fetch(this.url + this.file + this.action, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -52,8 +63,11 @@ export class Fetch {
     }
 
     protected async fetchRemoveItem(itemId: string) {
+        this.file = "items.php";
+        this.action = "?action=removeItem";
+
         try {
-            const response = await fetch(this.url + "removeItem", {
+            const response = await fetch(this.url + this.file + this.action, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -79,8 +93,11 @@ export class Fetch {
     }
 
     protected async fetchChangeItemState(itemId: string) {
+        this.file = "items.php";
+        this.action = "?action=changeState";
+
         try {
-            const response = await fetch(this.url + "changeState", {
+            const response = await fetch(this.url + this.file + this.action, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -106,8 +123,11 @@ export class Fetch {
     }
 
     protected async fetchAllItemsStateDone() {
+        this.file = "items.php";
+        this.action = "?action=stateAllDone";
+
         try {
-            const response = await fetch(this.url + "stateAllDone", {
+            const response = await fetch(this.url + this.file + this.action, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -129,8 +149,11 @@ export class Fetch {
     }
 
     protected async fetchRemoveAllItems() {
+        this.file = "items.php";
+        this.action = "?action=removeAll";
+
         try {
-            const response = await fetch(this.url + "removeAll", {
+            const response = await fetch(this.url + this.file + this.action, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -144,6 +167,41 @@ export class Fetch {
             const result = await response.json();
             // console.log(result);
             return result
+        } catch (error) {
+            if (error instanceof Error) {
+                console.error(error.message);
+            }
+        }
+    }
+
+
+
+    // * USERS
+    protected async fetchAddUser(email: string, password: string) {
+        this.file = "auth.php";
+        this.action = "?action=addUser";
+
+        try {
+            const response = await fetch(this.url + this.file + this.action, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'ngrok-skip-browser-warning': 'true',
+                },
+
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                }),
+                // credentials: 'include',
+            });
+            if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+            }
+
+
+            const result = await response.json();
+            return result;
         } catch (error) {
             if (error instanceof Error) {
                 console.error(error.message);

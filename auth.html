@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Primary Meta Tags -->
+    <title>Shopping List App</title>
+    <meta name="title" content="Shopping List App" />
+    <meta name="description"
+        content="Allows you to create a list of shopping items. Provides: Add, Remove, Mark as Shopped functionalities" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Shopping List App" />
+    <meta property="og:description"
+        content="Allows you to create a list of shopping items. Provides: Add, Remove, Mark as Shopped functionalities" />
+    <meta property="og:image" content="logo.png" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Shopping List App" />
+    <meta property="twitter:description"
+        content="Allows you to create a list of shopping items. Provides: Add, Remove, Mark as Shopped functionalities" />
+    <meta property="twitter:image" content="logo.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+
+
+
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/output.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- * JQUERY -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="assets/js/Classes/auth-ui.js" defer=""></script>
+
+    <!-- !TEST -->
+    <link rel="manifest" crossorigin="use-credentials" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/images/icons/apple-icon-180.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2048-2732.jpg"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2732-2048.jpg"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1668-2388.jpg"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2388-1668.jpg"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1536-2048.jpg"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2048-1536.jpg"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1640-2360.jpg"
+        media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2360-1640.jpg"
+        media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1668-2224.jpg"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2224-1668.jpg"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1620-2160.jpg"
+        media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2160-1620.jpg"
+        media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1488-2266.jpg"
+        media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2266-1488.jpg"
+        media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1320-2868.jpg"
+        media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2868-1320.jpg"
+        media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1206-2622.jpg"
+        media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2622-1206.jpg"
+        media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1290-2796.jpg"
+        media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2796-1290.jpg"
+        media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1179-2556.jpg"
+        media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2556-1179.jpg"
+        media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1170-2532.jpg"
+        media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2532-1170.jpg"
+        media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1284-2778.jpg"
+        media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2778-1284.jpg"
+        media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1125-2436.jpg"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2436-1125.jpg"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1242-2688.jpg"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2688-1242.jpg"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-828-1792.jpg"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1792-828.jpg"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1242-2208.jpg"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-2208-1242.jpg"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-750-1334.jpg"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1334-750.jpg"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-640-1136.jpg"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/images/icons/apple-splash-1136-640.jpg"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+</head>
+
+<body>
+    <div class="flex justify-center rounded-xl mt-10">
+        <button class="cursor-pointer bg-white rounded-xl rounded-br-none rounded-tr-none p-2 hover:brightness-70">Εγγραφή</button>
+        <button class="cursor-pointer bg-[#3f58c7] text-white rounded-xl rounded-bl-none rounded-tl-none p-2">Σύνδεση</button>
+    </div>
+    <!-- * Signup -->
+    <div id="signup-form" class="m-auto max-w-[600px] mt-10 p-2 hidden">
+        <h1 class="text-center text-black text-4xl font-bold mb-10">Εγγραφή</h1>
+        <div class="flex flex-col">
+            <p class="text-lg">Email</p>
+            <input type="email" name="" id="" placeholder="Email"
+                class="text-lg outline-none inset-shadow-sm shadow-md bg-white rounded-xl p-3 w-[100%] mb-5">
+    
+            <p class="text-lg">Κωδικός πρόσβασης</p>
+            <input type="password" name="" id="" placeholder="Κωδικός πρόσβασης" class="text-lg outline-none inset-shadow-sm shadow-md bg-white rounded-xl p-3 w-[100%]
+                mb-5">
+
+            <p class="text-lg">Επανάληψη κωδικού</p>
+            <input type="password" name="" id="" placeholder="Επανάληψη κωδικού" class="text-lg outline-none inset-shadow-sm shadow-md bg-white rounded-xl p-3 w-[100%]
+                            mb-5">
+    
+            <button type="submit"
+                class="cursor-pointer shadow-md bg-[#3f58c7] hover:brightness-70 p-3 rounded-xl text-white text-xl">Εγγραφή</button>
+        </div>
+    </div>
+
+    <!-- * Login -->
+    <div id="login-form" class="m-auto max-w-[600px] mt-10 p-2">
+        <h1 class="text-center text-black text-4xl font-bold mb-10">Σύνδεση</h1>
+        <div class="flex flex-col">
+            <p class="text-lg">Email</p>
+            <input type="email" name="" id="" placeholder="Email" class="text-lg outline-none inset-shadow-sm shadow-md bg-white rounded-xl p-3 w-[100%] mb-5">
+            
+            <p class="text-lg">Κωδικός πρόσβασης</p>
+            <input type="password" name="" id="" placeholder="Κωδικός πρόσβασης" class="text-lg outline-none inset-shadow-sm shadow-md bg-white rounded-xl p-3 w-[100%]
+            mb-5">
+
+            <button type="submit" class="cursor-pointer shadow-md bg-[#3f58c7] hover:brightness-70 p-3 rounded-xl text-white text-xl">Σύνδεση</button>
+        </div>
+    </div>
+
+    <script>
+        navigator.serviceWorker.register('/service-worker.js');
+    </script>
+</body>
+
+</html>

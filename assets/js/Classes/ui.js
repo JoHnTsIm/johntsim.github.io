@@ -22,43 +22,40 @@ class UI extends Fetch {
         this.itemInputElement = document.getElementById('itemNameInput');
         this.displayItemsChanges = () => __awaiter(this, void 0, void 0, function* () {
             const data = yield this.fetchAllItems();
-            if (this.itemsList && data.length > 0) {
-                this.itemsList.innerHTML = "";
-                const fragment = document.createDocumentFragment();
-                data.forEach(item => {
-                    const newDiv = document.createElement('div');
-                    newDiv.classList.add('item', 'pr-2', 'shadow-md', 'focus:brightness-70');
-                    const newParagraph = document.createElement('p');
-                    if (item.itemState == 0) {
-                        newParagraph.classList.add('items', 'text-2xl', 'cursor-pointer', 'item-default', 'w-[100%]', 'p-2', 'select-none');
-                    }
-                    else {
-                        newParagraph.classList.add('items', 'text-2xl', 'cursor-pointer', 'item-erased', 'w-[100%]', 'p-2', 'select-none');
-                    }
-                    newParagraph.id = item.itemId;
-                    newParagraph.textContent = item.itemName;
-                    const newTrashButton = document.createElement('button');
-                    newTrashButton.classList.add('deleteItemBtn', 'cursor-pointer', 'hover:brightness-70');
-                    const newTrashImg = document.createElement('img');
-                    newTrashImg.classList.add('icon', 'negative');
-                    newTrashImg.src = "assets/images/svgs/solid/trash.svg";
-                    newTrashButton.appendChild(newTrashImg);
-                    newDiv.appendChild(newParagraph);
-                    newDiv.appendChild(newTrashButton);
-                    fragment.appendChild(newDiv);
-                });
-                this.itemsList.appendChild(fragment);
+            if (!this.itemsList)
+                return;
+            this.itemsList.innerHTML = "";
+            if (data.length === 0) {
+                const emptyDiv = document.createElement('div');
+                emptyDiv.classList.add('flex', 'flex-row', 'gap-3', 'mb-3', 'justify-center');
+                const emptyMsg = document.createElement('p');
+                emptyMsg.classList.add('items', 'text-2xl', 'text-black');
+                emptyMsg.textContent = "λίστα άδεια";
+                emptyDiv.appendChild(emptyMsg);
+                this.itemsList.appendChild(emptyDiv);
+                return;
             }
-            else {
-                this.itemsList.innerHTML = "";
-                const newDiv = document.createElement('div');
-                newDiv.classList.add('flex', 'flex-row', 'gap-3', 'mb-3', 'justify-center');
-                const newParagraph = document.createElement('p');
-                newParagraph.classList.add('items', 'text-2xl', 'text-black');
-                newParagraph.textContent = "λίστα άδεια";
-                newDiv.appendChild(newParagraph);
-                this.itemsList.appendChild(newDiv);
-            }
+            const fragment = document.createDocumentFragment();
+            data.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('item', 'pr-2', 'shadow-md', 'focus:brightness-70');
+                const itemText = document.createElement('p');
+                itemText.id = item.itemId;
+                itemText.textContent = item.itemName;
+                const baseClasses = ['items', 'text-2xl', 'cursor-pointer', 'w-[100%]', 'p-2', 'select-none'];
+                const stateClass = item.itemState === 0 ? 'item-default' : 'item-erased';
+                itemText.classList.add(...baseClasses, stateClass);
+                const deleteButton = document.createElement('button');
+                deleteButton.classList.add('deleteItemBtn', 'cursor-pointer', 'hover:brightness-70');
+                const trashIcon = document.createElement('img');
+                trashIcon.classList.add('icon', 'negative');
+                trashIcon.src = "assets/images/svgs/solid/trash.svg";
+                deleteButton.appendChild(trashIcon);
+                itemDiv.appendChild(itemText);
+                itemDiv.appendChild(deleteButton);
+                fragment.appendChild(itemDiv);
+            });
+            this.itemsList.appendChild(fragment);
         });
         this.addItemToList = () => __awaiter(this, void 0, void 0, function* () {
             if (this.itemInputElement instanceof HTMLInputElement) {
@@ -83,20 +80,6 @@ class UI extends Fetch {
             yield this.fetchRemoveAllItems();
             yield this.displayItemsChanges();
         });
-        // private fetchAllUndone() {
-        //     fetch(this.api_url + "stateAllUndone", {
-        //         method: 'POST',
-        //         headers: {
-        //             'Accept': 'application/json',
-        //             'ngrok-skip-browser-warning': 'true',
-        //         },
-        //     }).then((response) => {
-        //         this.displayItemsToUI();
-        //     }).catch((error) => {
-        //         console.error("Error fetching or parsing JSON:", error);
-        //         return null; //
-        //     })
-        // }
         this.liveUpdateUI = () => __awaiter(this, void 0, void 0, function* () {
             const data = yield this.fetchAllItems();
             if (data instanceof Array) {
@@ -142,8 +125,6 @@ class UI extends Fetch {
         (_c = this.allDoneBtn) === null || _c === void 0 ? void 0 : _c.addEventListener("click", (event) => {
             this.changeAllItemsStateDoneFromList();
         });
-        // Shopping list undone
-        // this.allUndoneBtn?.addEventListener("click", (event) => this.fetchAllUndone());
         // Add Item button
         (_d = this.addItemBtn) === null || _d === void 0 ? void 0 : _d.addEventListener("click", (event) => {
             const input = document.getElementById('itemNameInput');
@@ -163,3 +144,19 @@ class UI extends Fetch {
     }
 }
 const ui = new UI();
+// Shopping list undone
+// this.allUndoneBtn?.addEventListener("click", (event) => this.fetchAllUndone());
+// private fetchAllUndone() {
+//     fetch(this.api_url + "stateAllUndone", {
+//         method: 'POST',
+//         headers: {
+//             'Accept': 'application/json',
+//             'ngrok-skip-browser-warning': 'true',
+//         },
+//     }).then((response) => {
+//         this.displayItemsToUI();
+//     }).catch((error) => {
+//         console.error("Error fetching or parsing JSON:", error);
+//         return null; //
+//     })
+// }

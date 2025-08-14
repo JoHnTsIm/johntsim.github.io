@@ -9,12 +9,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 export class Fetch {
     constructor() {
-        this.url = "https://crane-capital-buck.ngrok-free.app/api/items.php?action=";
+        this.file = "";
+        this.action = "";
+        this.url = "https://crane-capital-buck.ngrok-free.app/api/";
     }
+    // * ITEMS
     fetchAllItems() {
         return __awaiter(this, void 0, void 0, function* () {
+            this.file = "items.php";
+            this.action = "?action=loadItems";
             try {
-                const response = yield fetch(this.url + "loadItems", {
+                const response = yield fetch(this.url + this.file + this.action, {
                     method: 'GET',
                     headers: {
                         'Accept': 'application/json',
@@ -37,8 +42,10 @@ export class Fetch {
     }
     fetchAddItem(itemInputText) {
         return __awaiter(this, void 0, void 0, function* () {
+            this.file = "items.php";
+            this.action = "?action=addItem";
             try {
-                const response = yield fetch(this.url + "addItem", {
+                const response = yield fetch(this.url + this.file + this.action, {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
@@ -63,8 +70,10 @@ export class Fetch {
     }
     fetchRemoveItem(itemId) {
         return __awaiter(this, void 0, void 0, function* () {
+            this.file = "items.php";
+            this.action = "?action=removeItem";
             try {
-                const response = yield fetch(this.url + "removeItem", {
+                const response = yield fetch(this.url + this.file + this.action, {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
@@ -90,8 +99,10 @@ export class Fetch {
     }
     fetchChangeItemState(itemId) {
         return __awaiter(this, void 0, void 0, function* () {
+            this.file = "items.php";
+            this.action = "?action=changeState";
             try {
-                const response = yield fetch(this.url + "changeState", {
+                const response = yield fetch(this.url + this.file + this.action, {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
@@ -117,8 +128,10 @@ export class Fetch {
     }
     fetchAllItemsStateDone() {
         return __awaiter(this, void 0, void 0, function* () {
+            this.file = "items.php";
+            this.action = "?action=stateAllDone";
             try {
-                const response = yield fetch(this.url + "stateAllDone", {
+                const response = yield fetch(this.url + this.file + this.action, {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
@@ -141,8 +154,10 @@ export class Fetch {
     }
     fetchRemoveAllItems() {
         return __awaiter(this, void 0, void 0, function* () {
+            this.file = "items.php";
+            this.action = "?action=removeAll";
             try {
-                const response = yield fetch(this.url + "removeAll", {
+                const response = yield fetch(this.url + this.file + this.action, {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
@@ -154,6 +169,37 @@ export class Fetch {
                 }
                 const result = yield response.json();
                 // console.log(result);
+                return result;
+            }
+            catch (error) {
+                if (error instanceof Error) {
+                    console.error(error.message);
+                }
+            }
+        });
+    }
+    // * USERS
+    fetchAddUser(email, password) {
+        return __awaiter(this, void 0, void 0, function* () {
+            this.file = "auth.php";
+            this.action = "?action=addUser";
+            try {
+                const response = yield fetch(this.url + this.file + this.action, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'ngrok-skip-browser-warning': 'true',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    }),
+                    // credentials: 'include',
+                });
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
+                const result = yield response.json();
                 return result;
             }
             catch (error) {

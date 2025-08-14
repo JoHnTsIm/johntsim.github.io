@@ -6,11 +6,11 @@ class UI extends Fetch {
 
     // * ELEMENTS
     private itemsList = document.getElementById('itemsList');
-    private removeAllBtn = document.getElementById('removeAllBtn');
-    private addItemBtn = document.getElementById('addItemBtn');
-    private allDoneBtn = document.getElementById('allDoneBtn');
-    private allUndoneBtn = document.getElementById('allUndoneBtn');
-    private itemInputElement = document.getElementById('itemNameInput');
+    private removeAllBtn: HTMLElement | null = document.getElementById('removeAllBtn');
+    private addItemBtn: HTMLElement | null = document.getElementById('addItemBtn');
+    private allDoneBtn: HTMLElement | null = document.getElementById('allDoneBtn');
+    private allUndoneBtn: HTMLElement | null = document.getElementById('allUndoneBtn');
+    private itemInputElement: HTMLElement | null = document.getElementById('itemNameInput');
 
     constructor() {
         super();
@@ -57,9 +57,6 @@ class UI extends Fetch {
             this.changeAllItemsStateDoneFromList();
         });
 
-        // Shopping list undone
-        // this.allUndoneBtn?.addEventListener("click", (event) => this.fetchAllUndone());
-
         // Add Item button
         this.addItemBtn?.addEventListener("click", (event) => {
             const input = document.getElementById('itemNameInput') as HTMLInputElement;
@@ -78,59 +75,52 @@ class UI extends Fetch {
     private displayItemsChanges = async () => {
         const data: Array<any> = await this.fetchAllItems();
 
+        if (!this.itemsList) return;
 
-        if (this.itemsList && data.length > 0) {
-            this.itemsList.innerHTML = "";
+        this.itemsList.innerHTML = "";
 
-            const fragment = document.createDocumentFragment();
+        if (data.length === 0) {
+            const emptyDiv = document.createElement('div');
+            emptyDiv.classList.add('flex', 'flex-row', 'gap-3', 'mb-3', 'justify-center');
 
-            data.forEach(item => {
-                const newDiv = document.createElement('div');
-                newDiv.classList.add('item', 'pr-2', 'shadow-md', 'focus:brightness-70');
+            const emptyMsg = document.createElement('p');
+            emptyMsg.classList.add('items', 'text-2xl', 'text-black');
+            emptyMsg.textContent = "λίστα άδεια";
 
-                const newParagraph = document.createElement('p');
-
-                if (item.itemState == 0) {
-                    newParagraph.classList.add('items', 'text-2xl', 'cursor-pointer', 'item-default', 'w-[100%]', 'p-2', 'select-none');
-                } else {
-                    newParagraph.classList.add('items', 'text-2xl', 'cursor-pointer', 'item-erased', 'w-[100%]', 'p-2', 'select-none');
-                }
-
-
-                newParagraph.id = item.itemId;
-                newParagraph.textContent = item.itemName;
-
-                const newTrashButton = document.createElement('button');
-                newTrashButton.classList.add('deleteItemBtn', 'cursor-pointer', 'hover:brightness-70');
-
-                const newTrashImg = document.createElement('img');
-                newTrashImg.classList.add('icon', 'negative');
-                newTrashImg.src = "assets/images/svgs/solid/trash.svg";
-
-                newTrashButton.appendChild(newTrashImg);
-
-                newDiv.appendChild(newParagraph);
-                newDiv.appendChild(newTrashButton);
-
-                fragment.appendChild(newDiv);
-            });
-
-            this.itemsList.appendChild(fragment);
-        } else {
-            this.itemsList!.innerHTML = "";
-
-            const newDiv = document.createElement('div');
-            newDiv.classList.add('flex', 'flex-row', 'gap-3', 'mb-3', 'justify-center');
-
-            const newParagraph = document.createElement('p');
-
-            newParagraph.classList.add('items', 'text-2xl', 'text-black');
-
-            newParagraph.textContent = "λίστα άδεια";
-            newDiv.appendChild(newParagraph);
-
-            this.itemsList!.appendChild(newDiv);
+            emptyDiv.appendChild(emptyMsg);
+            this.itemsList.appendChild(emptyDiv);
+            return;
         }
+
+        const fragment = document.createDocumentFragment();
+
+        data.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('item', 'pr-2', 'shadow-md', 'focus:brightness-70');
+
+            const itemText = document.createElement('p');
+            itemText.id = item.itemId;
+            itemText.textContent = item.itemName;
+
+            const baseClasses = ['items', 'text-2xl', 'cursor-pointer', 'w-[100%]', 'p-2', 'select-none'];
+            const stateClass = item.itemState === 0 ? 'item-default' : 'item-erased';
+            itemText.classList.add(...baseClasses, stateClass);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.classList.add('deleteItemBtn', 'cursor-pointer', 'hover:brightness-70');
+
+            const trashIcon = document.createElement('img');
+            trashIcon.classList.add('icon', 'negative');
+            trashIcon.src = "assets/images/svgs/solid/trash.svg";
+
+            deleteButton.appendChild(trashIcon);
+            itemDiv.appendChild(itemText);
+            itemDiv.appendChild(deleteButton);
+
+            fragment.appendChild(itemDiv);
+        });
+
+        this.itemsList.appendChild(fragment);
     }
 
     private addItemToList = async () => {
@@ -153,7 +143,7 @@ class UI extends Fetch {
         await this.displayItemsChanges();
     }
 
-    private changeAllItemsStateDoneFromList = async() => {
+    private changeAllItemsStateDoneFromList = async () => {
         await this.fetchAllItemsStateDone();
         await this.displayItemsChanges();
     }
@@ -162,21 +152,6 @@ class UI extends Fetch {
         await this.fetchRemoveAllItems();
         await this.displayItemsChanges();
     }
-
-    // private fetchAllUndone() {
-    //     fetch(this.api_url + "stateAllUndone", {
-    //         method: 'POST',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'ngrok-skip-browser-warning': 'true',
-    //         },
-    //     }).then((response) => {
-    //         this.displayItemsToUI();
-    //     }).catch((error) => {
-    //         console.error("Error fetching or parsing JSON:", error);
-    //         return null; //
-    //     })
-    // }
 
     private liveUpdateUI = async () => {
         const data = await this.fetchAllItems();
@@ -200,3 +175,44 @@ class UI extends Fetch {
 }
 
 const ui = new UI();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Shopping list undone
+// this.allUndoneBtn?.addEventListener("click", (event) => this.fetchAllUndone());
+
+// private fetchAllUndone() {
+//     fetch(this.api_url + "stateAllUndone", {
+//         method: 'POST',
+//         headers: {
+//             'Accept': 'application/json',
+//             'ngrok-skip-browser-warning': 'true',
+//         },
+//     }).then((response) => {
+//         this.displayItemsToUI();
+//     }).catch((error) => {
+//         console.error("Error fetching or parsing JSON:", error);
+//         return null; //
+//     })
+// }
