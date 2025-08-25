@@ -17,8 +17,8 @@ class UI extends Fetch {
         this.initialize();
 
         // * Check changes, fetch data
-        this.liveUpdateUI();
-        this.runSetInterval();
+        // this.liveUpdateUI();
+        // this.runSetInterval();
     }
 
     // * Setup methods
@@ -50,7 +50,7 @@ class UI extends Fetch {
         });
 
         // Remove All button
-        this.removeAllBtn?.addEventListener("click", (event) => this.removeAllItemsFromList());
+        this.removeAllBtn?.addEventListener("click", (event) => this.removeAllDoneItemsFromList());
 
         // Shopping list done
         this.allDoneBtn?.addEventListener("click", (event) => {
@@ -67,6 +67,10 @@ class UI extends Fetch {
             }
         });
 
+        document.getElementById('logout')?.addEventListener('click', (event) => {
+            this.logout();
+        })
+
         window.addEventListener('DOMContentLoaded', (event) => {
             this.displayItemsChanges();
         })
@@ -74,7 +78,7 @@ class UI extends Fetch {
 
     private displayItemsChanges = async () => {
         const data: Array<any> = await this.fetchAllItems();
-
+        
         if (!this.itemsList) return;
 
         this.itemsList.innerHTML = "";
@@ -148,30 +152,35 @@ class UI extends Fetch {
         await this.displayItemsChanges();
     }
 
-    private removeAllItemsFromList = async () => {
-        await this.fetchRemoveAllItems();
+    private removeAllDoneItemsFromList = async () => {
+        await this.fetchRemoveAllDoneItems();
         await this.displayItemsChanges();
     }
 
-    private liveUpdateUI = async () => {
-        const data = await this.fetchAllItems();
-
-        if (data instanceof Array) {
-            if (JSON.stringify(data) !== JSON.stringify(this.dataPrevious)) {
-                console.log("its different");
-
-                await this.displayItemsChanges();
-
-                this.dataPrevious = data;
-            }
-        }
+    private logout = async () => {
+        localStorage.removeItem('token');
+        window.location.href = 'auth.html';
     }
 
-    private runSetInterval() {
-        setInterval(() => {
-            this.liveUpdateUI();
-        }, 5000);
-    }
+    // private liveUpdateUI = async () => {
+    //     const data = await this.fetchAllItems();
+
+    //     if (data instanceof Array) {
+    //         if (JSON.stringify(data) !== JSON.stringify(this.dataPrevious)) {
+    //             console.log("its different");
+
+    //             await this.displayItemsChanges();
+
+    //             this.dataPrevious = data;
+    //         }
+    //     }
+    // }
+
+    // private runSetInterval() {
+    //     setInterval(() => {
+    //         this.liveUpdateUI();
+    //     }, 5000);
+    // }
 }
 
 const ui = new UI();

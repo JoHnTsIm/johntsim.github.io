@@ -76,31 +76,25 @@ class UI extends Fetch {
             yield this.fetchAllItemsStateDone();
             yield this.displayItemsChanges();
         });
-        this.removeAllItemsFromList = () => __awaiter(this, void 0, void 0, function* () {
-            yield this.fetchRemoveAllItems();
+        this.removeAllDoneItemsFromList = () => __awaiter(this, void 0, void 0, function* () {
+            yield this.fetchRemoveAllDoneItems();
             yield this.displayItemsChanges();
         });
-        this.liveUpdateUI = () => __awaiter(this, void 0, void 0, function* () {
-            const data = yield this.fetchAllItems();
-            if (data instanceof Array) {
-                if (JSON.stringify(data) !== JSON.stringify(this.dataPrevious)) {
-                    console.log("its different");
-                    yield this.displayItemsChanges();
-                    this.dataPrevious = data;
-                }
-            }
+        this.logout = () => __awaiter(this, void 0, void 0, function* () {
+            localStorage.removeItem('token');
+            window.location.href = 'auth.html';
         });
         this.initialize();
         // * Check changes, fetch data
-        this.liveUpdateUI();
-        this.runSetInterval();
+        // this.liveUpdateUI();
+        // this.runSetInterval();
     }
     // * Setup methods
     initialize() {
         this.setupListeners();
     }
     setupListeners() {
-        var _a, _b, _c, _d;
+        var _a, _b, _c, _d, _e;
         // 📌 Delegated click handler for itemsList - https://www.freecodecamp.org/news/event-delegation-javascript/
         (_a = this.itemsList) === null || _a === void 0 ? void 0 : _a.addEventListener("click", (event) => {
             var _a;
@@ -120,7 +114,7 @@ class UI extends Fetch {
             }
         });
         // Remove All button
-        (_b = this.removeAllBtn) === null || _b === void 0 ? void 0 : _b.addEventListener("click", (event) => this.removeAllItemsFromList());
+        (_b = this.removeAllBtn) === null || _b === void 0 ? void 0 : _b.addEventListener("click", (event) => this.removeAllDoneItemsFromList());
         // Shopping list done
         (_c = this.allDoneBtn) === null || _c === void 0 ? void 0 : _c.addEventListener("click", (event) => {
             this.changeAllItemsStateDoneFromList();
@@ -133,14 +127,12 @@ class UI extends Fetch {
                 input.value = ""; // Clear input
             }
         });
+        (_e = document.getElementById('logout')) === null || _e === void 0 ? void 0 : _e.addEventListener('click', (event) => {
+            this.logout();
+        });
         window.addEventListener('DOMContentLoaded', (event) => {
             this.displayItemsChanges();
         });
-    }
-    runSetInterval() {
-        setInterval(() => {
-            this.liveUpdateUI();
-        }, 5000);
     }
 }
 const ui = new UI();

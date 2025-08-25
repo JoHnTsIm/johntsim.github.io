@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
 
 
   <!-- Primary Meta Tags -->
@@ -125,7 +125,21 @@
 </head>
 
 <body>
-  <div class="flex flex-col max-w-[600px] m-auto h-[90vh] mt-10 p-2">
+    <script>
+      if (localStorage.getItem("token") === null) {
+        window.location.href = "auth.html";
+      }
+    </script>
+
+  <div class="flex flex-col max-w-[600px] m-auto h-[90vh] p-2">
+
+    <div class="flex items-center justify-end gap-1 mb-10">
+        <button
+          id="logout" class="flex bg-[#ff8377] shadow-md p-2 rounded-xl cursor-pointer hover:brightness-70">
+          <img class="icon" src="assets/images/svgs/solid/arrow-right-to-bracket.svg" alt="arrow-right-to-bracket.svg">
+        </button>
+    </div>
+
     <h1 class="text-center text-black text-4xl font-bold mb-10">Shopping List</h1>
     <div class="flex gap-1 justify-center mb-3 w-[100%]">
       <button id="removeAllBtn"
@@ -151,10 +165,13 @@
     <div id="itemsList" class="flex flex-col m-auto w-[100%] h-[100%] overflow-y-auto">
       <p class="text-black">Φόρτωση λίστας...</p>
     </div>
+
   </div>
+
   <script>
     navigator.serviceWorker.register('/service-worker.js');
   </script>
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@ if (workbox) {
     console.log('Workbox loaded 🎉');
     workbox.routing.registerRoute(
         ({ request }) => request.destination === 'image',
-        new workbox.strategies.NetworkFirst()
+        new workbox.strategies.CacheFirst()
     );
 } else {
     console.log('Workbox failed to load 😢');

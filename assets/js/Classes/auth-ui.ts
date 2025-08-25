@@ -1,9 +1,11 @@
+import { Check } from "./check.js";
 import { Fetch } from "./fetch.js";
 
 class AuthUI extends Fetch {
     // * ELEMENTS
     private signupForm: HTMLElement | null = document.getElementById('signup-form');
     private loginForm: HTMLElement | null = document.getElementById('login-form');
+    private signupLoginMsg: HTMLElement | null = document.getElementById('signup-login-msg');
 
     constructor() {
         super();
@@ -19,6 +21,8 @@ class AuthUI extends Fetch {
         const formBtns = document.querySelector('div')!.querySelectorAll('button');
 
         formBtns[0].addEventListener('click', (event) => {
+            this.signupLoginMsg!.innerHTML = "";
+
             formBtns[0].classList.replace('bg-white', 'bg-[#3f58c7]');
             formBtns[0].classList.add('text-white');
             formBtns[0].classList.remove('hover:brightness-70');
@@ -32,6 +36,8 @@ class AuthUI extends Fetch {
         })
 
         formBtns[1].addEventListener('click', (event) => {
+            this.signupLoginMsg!.innerHTML = "";
+
             formBtns[1].classList.replace('bg-white', 'bg-[#3f58c7]');
             formBtns[1].classList.add('text-white');
             formBtns[1].classList.remove('hover:brightness-70');
@@ -46,57 +52,100 @@ class AuthUI extends Fetch {
 
         this.signupForm?.querySelector('button')?.addEventListener('click', (event) => {
             // console.log("SIGNUP FORM");
-            this.updateLoginUserUI();
+            this.callSignupUser();
+        })
+
+        this.loginForm?.querySelector('button')?.addEventListener('click', (event) => {
+            // console.log("SIGNUP FORM");
+            this.callLoginUser();
         })
     }
 
-    private checkEmptyInput = (inputs: Array<string>): boolean => {
-        let isEmpty = false;
+    private createErrorORSuccessMessage = (success: boolean, message:string) => {
+        if (success) {
+            this.signupLoginMsg!.innerHTML = "";
 
-        inputs.forEach(inputText => {
-            if (inputText.length == 0) {
-                isEmpty = true;
-            }
-        });
+            const div = document.createElement('div');
+            div.classList.remove('error');
+            div.classList.add('success');
 
-        return isEmpty;
-    }
-    
-    private checkAllTheSame = (inputs: Array<string>): boolean => {
-        let AreAllTheSame = true;
+            const paragraph = document.createElement('p');
+            paragraph.textContent = message;
 
-        for (let index = 0; index < inputs.length; index++) {
-            if (inputs[index] != inputs[0]) {
-                AreAllTheSame = false;
-            }
+            div.appendChild(paragraph);
+
+            this.signupLoginMsg!.appendChild(div);
+        } else {
+            this.signupLoginMsg!.innerHTML = "";
+
+            const div = document.createElement('div');
+            div.classList.remove('success');
+            div.classList.add('error');
+
+            const paragraph = document.createElement('p');
+            paragraph.textContent = message;
+
+            div.appendChild(paragraph);
+
+            this.signupLoginMsg!.appendChild(div);
+            this.loginForm!.querySelectorAll('input')[1].value = "";
         }
-
-        return AreAllTheSame;
     }
 
-    private updateLoginUserUI = async () => {
+    private callCheckUserExists = async ($email: string) => {
+        return await this.fetchCheckUserExists($email);
+    }
+
+    private callSignupUser = async () => {
+        const check = new Check();
+
         let email = this.signupForm!.querySelectorAll('input')[0].value;
         let password = this.signupForm!.querySelectorAll('input')[1].value;
         let retype_password = this.signupForm!.querySelectorAll('input')[2].value
 
-        if (this.checkEmptyInput([email, password, retype_password])) {
-            console.log('fill in all the inputs');
-        } else if (!this.checkAllTheSame([password, retype_password]))
-        { 
-            console.log("the password don't match");
+        if (check.emptyInput([email, password, retype_password])) {
+            this.createErrorORSuccessMessage(false, 'Πρέπει να συμπληρώσεις όλα τα πεδία');
+
+        } else if (!check.validEmail(email)) {
+            this.createErrorORSuccessMessage(false, 'Μη έγκυρη διεύθυνση email');
+
+        } else if (await this.callCheckUserExists(email)) {
+            this.createErrorORSuccessMessage(false, 'Αυτό το email χρησιμοποιείται ήδη');
+
+        } else if (!check.allMatch([password, retype_password])) {
+            this.createErrorORSuccessMessage(false, 'Οι κωδικοί πρόσβασης διαφέρουν');
+
         } else {
             // console.log("Email: " + email);
             // console.log("Password: " + password);
-            await this.fetchAddUser(email, password);
+            await this.fetchSignupUser(email, password);
 
             this.signupForm!.querySelectorAll('input')[0].value = "";
             this.signupForm!.querySelectorAll('input')[1].value = "";
             this.signupForm!.querySelectorAll('input')[2].value = "";
 
+            this.createErrorORSuccessMessage(true, 'Ο λογαριασμός σου δημιουργήθηκε με επιτυχία');
         }
     }
 
+    private callLoginUser = async () => {
+        const check = new Check();
 
+        let email = this.loginForm!.querySelectorAll('input')[0].value;
+        let password = this.loginForm!.querySelectorAll('input')[1].value;
+        
+        if (check.emptyInput([email, password])) {
+            this.createErrorORSuccessMessage(false, 'Πρέπει να συμπληρώσεις όλα τα πεδία');
+        } else if (!check.validEmail(email)) {
+            this.createErrorORSuccessMessage(false, 'Μη έγκυρη διεύθυνση email');
+        } else if (!await this.fetchLoginUser(email, password)) {
+            this.createErrorORSuccessMessage(false, 'Ο κωδικός ή το email που δώσατε δεν ταιριάζουν');
+            console.log('fail');
+        } else {
+            await this.fetchLoginUser(email, password)
+            window.location.href = "index.html";
+        }
+    }
 }
 
 const ui = new AuthUI();
