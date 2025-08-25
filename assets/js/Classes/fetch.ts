@@ -1,7 +1,7 @@
 export class Fetch {
     private file: string = "";
     private action: string = "";
-    private url: string = "https://crane-capital-buck.ngrok-free.app/test/public/api/";
+    private url: string = "https://crane-capital-buck.ngrok-free.app/public/api/";
 
 
     // * ITEMS
@@ -314,7 +314,7 @@ export class Fetch {
 
             const result = await response.json();
             // console.log(result);
-            
+
             if (result.success) {
                 localStorage.setItem('token', result.jwtoken);
             }
