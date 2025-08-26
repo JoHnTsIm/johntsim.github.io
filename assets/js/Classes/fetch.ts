@@ -1,7 +1,7 @@
 export class Fetch {
     private file: string = "";
     private action: string = "";
-    private url: string = "https://crane-capital-buck.ngrok-free.app/public/api/";
+    private url: string = "https://trailhunters.gr/public/api/";
 
 
     // * ITEMS
