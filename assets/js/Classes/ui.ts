@@ -17,8 +17,8 @@ class UI extends Fetch {
         this.initialize();
 
         // * Check changes, fetch data
-        // this.liveUpdateUI();
-        // this.runSetInterval();
+        this.liveUpdateUI();
+        this.runSetInterval();
     }
 
     // * Setup methods
@@ -162,25 +162,25 @@ class UI extends Fetch {
         window.location.href = 'auth.html';
     }
 
-    // private liveUpdateUI = async () => {
-    //     const data = await this.fetchAllItems();
+    private liveUpdateUI = async () => {
+        const data = await this.fetchAllItems();
 
-    //     if (data instanceof Array) {
-    //         if (JSON.stringify(data) !== JSON.stringify(this.dataPrevious)) {
-    //             console.log("its different");
+        if (data instanceof Array) {
+            if (JSON.stringify(data) !== JSON.stringify(this.dataPrevious)) {
+                console.log("its different");
 
-    //             await this.displayItemsChanges();
+                await this.displayItemsChanges();
 
-    //             this.dataPrevious = data;
-    //         }
-    //     }
-    // }
+                this.dataPrevious = data;
+            }
+        }
+    }
 
-    // private runSetInterval() {
-    //     setInterval(() => {
-    //         this.liveUpdateUI();
-    //     }, 5000);
-    // }
+    private runSetInterval() {
+        setInterval(() => {
+            this.liveUpdateUI();
+        }, 5000);
+    }
 }
 
 const ui = new UI();
