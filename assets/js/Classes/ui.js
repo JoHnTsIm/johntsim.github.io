@@ -84,10 +84,20 @@ class UI extends Fetch {
             localStorage.removeItem('token');
             window.location.href = 'auth.html';
         });
+        this.liveUpdateUI = () => __awaiter(this, void 0, void 0, function* () {
+            const data = yield this.fetchAllItems();
+            if (data instanceof Array) {
+                if (JSON.stringify(data) !== JSON.stringify(this.dataPrevious)) {
+                    console.log("its different");
+                    yield this.displayItemsChanges();
+                    this.dataPrevious = data;
+                }
+            }
+        });
         this.initialize();
         // * Check changes, fetch data
-        // this.liveUpdateUI();
-        // this.runSetInterval();
+        this.liveUpdateUI();
+        this.runSetInterval();
     }
     // * Setup methods
     initialize() {
@@ -133,6 +143,11 @@ class UI extends Fetch {
         window.addEventListener('DOMContentLoaded', (event) => {
             this.displayItemsChanges();
         });
+    }
+    runSetInterval() {
+        setInterval(() => {
+            this.liveUpdateUI();
+        }, 5000);
     }
 }
 const ui = new UI();
