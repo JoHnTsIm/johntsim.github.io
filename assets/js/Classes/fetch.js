@@ -11,7 +11,7 @@ export class Fetch {
     constructor() {
         this.file = "";
         this.action = "";
-        this.url = "https://crane-capital-buck.ngrok-free.app/public/api/";
+        this.url = "https://trailhunters.gr/public/api/";
     }
     // * ITEMS
     fetchAllItems() {
